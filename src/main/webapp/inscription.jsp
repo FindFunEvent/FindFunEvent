@@ -17,10 +17,8 @@
 		<input type="password" name="motdepasse" /><br> 
 		<label for="ville">Ville  : </label> 
 		<input type="text" name="ville" /><br> 
-		
-		
-		
 		<input type="submit" value="Inscription"></input>
+		</form>
 		
 <a href="indexAccueilProjet.jsp" target="_blank">Aller à l'accueil</a><br>
 
