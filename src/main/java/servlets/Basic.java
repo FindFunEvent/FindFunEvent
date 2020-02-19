@@ -26,7 +26,7 @@ public class Basic extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
-		response.getWriter().append("").append(request.getContextPath()).append("<br><h1>Bienvenue sur FindFunEvent<3</h1>");
+		response.getWriter().append("").append(request.getContextPath()).append("<br><h1>Bienvenue sur FindFunEvent</h1>");
 
 	}
 
