@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import beans.Compte;
+import services.GestionCompte;
 
 /**
  * Servlet implementation class Inscription
@@ -38,6 +39,7 @@ HttpSession session=request.getSession();
 		
 		beans.Compte compte= (beans.Compte) new Compte(username,password,mail,ville);
 		
+		GestionCompte.creationCompte(compte);
 		System.out.println("infos bien enregistrées "+compte.toString());
 		this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
 	}

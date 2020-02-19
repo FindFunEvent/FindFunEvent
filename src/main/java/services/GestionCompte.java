@@ -11,8 +11,7 @@ import beans.Compte;
 public class GestionCompte {
 	
 		
-		public static void creationCompte() {
-			Compte compteCree = new Compte();
+		public static void creationCompte(Compte compteCree) {
 			
 			// Preparation de la construction de sessions
 			Configuration config = new Configuration(); 
