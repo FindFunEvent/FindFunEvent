@@ -32,9 +32,9 @@ public class Inscription extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 HttpSession session=request.getSession();
 		
-		String username=request.getParameter("username");
+		String username=request.getParameter("identifiant");
 		String mail=request.getParameter("mail");
-		String password=request.getParameter("password");
+		String password=request.getParameter("motdepasse");
 		String ville=request.getParameter("ville");
 		
 		beans.Compte compte= (beans.Compte) new Compte(username,password,mail,ville);
