@@ -5,17 +5,20 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import beans.Compte;
 
 /**
- * Servlet implementation class Basic
+ * Servlet implementation class Inscription
  */
-public class Basic extends HttpServlet {
+public class Inscription extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Basic() {
+    public Inscription() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -25,9 +28,18 @@ public class Basic extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
-		response.getWriter().append("").append(request.getContextPath()).append("<br><h1>Bienvenue sur FindFunEvent</h1>");
-
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+HttpSession session=request.getSession();
+		
+		String username=request.getParameter("username");
+		String mail=request.getParameter("mail");
+		String password=request.getParameter("password");
+		String ville=request.getParameter("ville");
+		
+		beans.Compte compte= (beans.Compte) new Compte(username,password,mail,ville);
+		
+		System.out.println("infos bien enregistrées "+compte.toString());
+		this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
 	}
 
 	/**

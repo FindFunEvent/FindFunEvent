@@ -14,14 +14,15 @@
 		
 		
 		<form action="pageAccueil" method="post" id="champConnexion">
-		<label for="username">username : </label> 
-		<input type="text" name="username" id="username"/><br> 
-		<label for="Saisie">password : </label> 
-		<input type="password" name="password" /><br> 
+		<label for="id">username : </label> 
+		<input type="text" name="id" id="id"/><br> 
+		<label for="mp">password : </label> 
+		<input type="password" name="mp" /><br> 
 		<label for="Envoyer" ></label><br>
 		<input type="submit" value="Connexion" id="Envoyer"></input>
 		
 	</form>
+
 
 </div>
 

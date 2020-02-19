@@ -5,13 +5,23 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-  	<servlet-name>Basic</servlet-name>
-  	<display-name>Basic</display-name>
+  	<servlet-name>PageAccueil</servlet-name>
+  	<display-name>PageAccueil</display-name>
   	<description></description>
-  	<servlet-class>servlets.Basic</servlet-class>
+  	<servlet-class>servlets.PageAccueil</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Inscription</servlet-name>
+  	<display-name>Inscription</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Inscription</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>Basic</servlet-name>
-  	<url-pattern>/Basic</url-pattern>
+  	<servlet-name>PageAccueil</servlet-name>
+  	<url-pattern>/PageAccueil</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Inscription</servlet-name>
+  	<url-pattern>/Inscription</url-pattern>
   </servlet-mapping>
 </web-app>

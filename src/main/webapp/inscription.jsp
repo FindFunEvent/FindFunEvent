@@ -8,7 +8,7 @@
 </head>
 <body>
 <h4>Pour vous inscrire, veuillez remplir le formulaire ci-joint :</h4>
-<form action="InscriptionProjet" method="post" id="champConnexion">
+<form action="Inscription" method="post" id="champConnexion">
 		<label for="identifiant">Identifiant : </label> 
 		<input type="text" name="identifiant" /><br> 
 		<label for="mail">Mail : </label> 
@@ -20,7 +20,7 @@
 		<input type="submit" value="Inscription"></input>
 		</form>
 		
-<a href="indexAccueilProjet.jsp" target="_blank">Aller à l'accueil</a><br>
+<a href="PageAccueil" target="_blank">Aller à l'accueil</a><br>
 
 </body>
 </html>

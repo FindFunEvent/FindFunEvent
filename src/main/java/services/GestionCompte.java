@@ -25,10 +25,10 @@ public class GestionCompte {
 			session.beginTransaction();
 
 			///Manipulations
-			compteCree.setMail();
-			compteCree.setPassword();
-			compteCree.setUsername();
-			compteCree.setVille();
+//			compteCree.setMail();
+//			compteCree.setPassword();
+//			compteCree.setUsername();
+//			compteCree.setVille();
 			session.save(compteCree);
 			
 			
