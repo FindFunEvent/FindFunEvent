@@ -43,8 +43,8 @@ public class PageAccueil extends HttpServlet {
 		response.getWriter().append("").append(request.getContextPath());
 				
 		HttpSession session = request.getSession();
-		Configuration config = new Configuration(); 
-    	SessionFactory sessionFactory = config.configure().buildSessionFactory();
+	
+    	
 		String username = request.getParameter("id");
 		String password = request.getParameter("mp");
 		System.out.println("coucou");
