@@ -23,15 +23,14 @@
 			<input type="submit" value="Connexion" id="Envoyer"></input>
 
 		</form>
-
-		<%
-			if (session.getAttribute("pseudoCompteActuel") != null) {
-				out.println("Bonjour " + session.getAttribute("pseudoCompteActuel"));
-			}
-		%>
-
-
-
+	</div>
+	<div>
+		<br>
+		<c:choose>
+			<c:when test="${sessionScope.pseudoCompteActuel !=null}">bonjour 
+			<c:out value="${sessionScope.pseudoCompteActuel}"/></c:when>
+			<c:when test="${sessionScope.pseudoCompteActuel ==null}">Veuillez renseigner vos identifiants.</c:when>
+		</c:choose>
 	</div>
 
 

@@ -49,9 +49,7 @@ public class PageAccueil extends HttpServlet {
 //		System.out.println(username);
 //		System.out.println(password);
 		Compte compteChoisi = GestionCompte.recuperationCompte(username, password);
-		if (compteChoisi != null)
-
-		{
+		if (compteChoisi != null){
 			session.setAttribute("pseudoCompteActuel", compteChoisi.getUsername());
 			session.setAttribute("mailCompteActuel", compteChoisi.getMail());
 			session.setAttribute("villeCompteActuel", compteChoisi.getVille());
