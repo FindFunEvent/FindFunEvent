@@ -23,10 +23,11 @@
 		
 	</form>
 
-
-<%String username=(String) session.getAttribute("pseudoCompteActuel");
-out.println(username);
-%>
+<%out.println("test"); %>
+	<% String pseudo = session.getAttribute(pseudoCompteActuel);
+				if(pseudo != null){
+					out.println("Bonjour " + pseudo);
+				}%>
 
 
 </div>
@@ -34,11 +35,7 @@ out.println(username);
 
 <br><h1>Bienvenue sur FindFunEvent</h1>
 <br>
-<%out.println("test"); %>
-	<%-- <% String pseudo = request.getAttribute(pseudoCompteActuel);
-				if(pseudo != null){
-					out.println("Bonjour " + pseudo);
-				}%> --%>
+
 	
 </body>
 </html>
