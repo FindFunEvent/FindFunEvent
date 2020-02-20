@@ -22,7 +22,13 @@
 		<input type="submit" value="Connexion" id="Envoyer"></input>
 		
 	</form>
-	
+
+
+<%String username=(String) session.getAttribute("pseudoCompteActuel");
+out.println(username);
+%>
+
+
 </div>
 
 
