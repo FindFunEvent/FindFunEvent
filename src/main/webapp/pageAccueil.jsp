@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div>Connectez-vous / <a href=inscription.jsp>Inscrivez-vous</a><br>
+<div>Connectez-vous / <a href=inscription.jsp>Inscrivez-vous chez nous</a><br>
 		
 		
 		<form action="pageAccueil" method="post" id="champConnexion">
