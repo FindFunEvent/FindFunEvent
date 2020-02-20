@@ -23,9 +23,9 @@
 		
 	</form>
 
-<%-- <%String username=(String) session.getAttribute("pseudoCompteActuel");
+<%String username=(String) session.getAttribute("pseudoCompteActuel");
 out.println(username);
-%> --%>
+%>
 
 </div>
 
