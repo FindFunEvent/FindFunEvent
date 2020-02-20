@@ -39,24 +39,23 @@ public class PageAccueil extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
+//		System.out.println("coucou");
 		response.getWriter().append("").append(request.getContextPath());
-				
+
 		HttpSession session = request.getSession();
-	
-    	
+
 		String username = request.getParameter("id");
 		String password = request.getParameter("mp");
-		System.out.println("coucou");
-		
-		if (GestionCompte.recuperationCompte(username, password) != null)
+//		System.out.println(username);
+//		System.out.println(password);
+		Compte compteChoisi = GestionCompte.recuperationCompte(username, password);
+		if (compteChoisi != null)
 
 		{
-			session.setAttribute("pseudoCompteActuel",
-					GestionCompte.recuperationCompte(username, password).getUsername());
-			session.setAttribute("mailCompteActuel", GestionCompte.recuperationCompte(username, password).getMail());
-			session.setAttribute("villeCompteActuel", GestionCompte.recuperationCompte(username, password).getVille());
-			System.out.println("Test Good");
+			session.setAttribute("pseudoCompteActuel", compteChoisi.getUsername());
+			session.setAttribute("mailCompteActuel", compteChoisi.getMail());
+			session.setAttribute("villeCompteActuel", compteChoisi.getVille());
+//			System.out.println("Test Good");
 		}
 
 		this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);

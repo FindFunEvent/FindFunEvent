@@ -1,6 +1,8 @@
 package services;
 
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+
+
+import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -9,13 +11,12 @@ import org.hibernate.cfg.Configuration;
 import beans.Compte;
 
 public class GestionCompte {
-	
+	// Preparation de la construction de sessions
+	static Configuration config = new Configuration(); 
+	static SessionFactory sessionFactory = config.configure().buildSessionFactory();
 		
 		public static void creationCompte(Compte compteCree) {
-			
-			// Preparation de la construction de sessions
-			Configuration config = new Configuration(); 
-	    	SessionFactory sessionFactory = config.configure().buildSessionFactory();
+
 		
 			// Ouverture session
 			Session session = sessionFactory.openSession();
@@ -42,11 +43,7 @@ public class GestionCompte {
 		
 		
 		public static Compte recuperationCompte(String usernameTest, String passwordTest) {
-			
-			// Preparation de la construction de sessions
-			Configuration config = new Configuration(); 
-	    	SessionFactory sessionFactory = config.configure().buildSessionFactory();
-		
+	
 			// Ouverture session
 			Session session = sessionFactory.openSession();
 
@@ -58,7 +55,7 @@ public class GestionCompte {
 //			compteCree.setPassword();
 //			compteCree.setUsername();
 //			compteCree.setVille();
-			Compte compteSelectionne = (Compte) session.createQuery("from comptes a where a.username LIKE '"+usernameTest+"' and a.password LIKE '"+ passwordTest+"'");
+			List<Compte> compteSelectionne = session.createQuery("from Compte a where a.username LIKE '"+usernameTest+"' and a.password LIKE '"+ passwordTest+"'").list();
 			
 			
 			
@@ -67,7 +64,7 @@ public class GestionCompte {
 			session.getTransaction().commit();
 
 			// Fermeture session
-//			session.close();
-			return compteSelectionne;
+			session.close();
+			return compteSelectionne.get(0);
 		}
 }
