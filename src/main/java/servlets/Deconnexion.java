@@ -3,6 +3,7 @@ package servlets;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -32,7 +33,7 @@ public class Deconnexion extends HttpServlet {
 		session.invalidate();
 		request.setAttribute("message", "Vous avez Ã©tÃ© dÃ©connectÃ©");
 
-		this.getServletContext().getRequestDispatcher("/deconnexion.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/pageAcceuil.jsp").forward(request, response);
 
 	}
 
