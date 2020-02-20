@@ -22,11 +22,17 @@
 		<input type="submit" value="Connexion" id="Envoyer"></input>
 		
 	</form>
-
-
+	
 </div>
 
 
 <br><h1>Bienvenue sur FindFunEvent</h1>
+<br>
+<%out.println("test"); %>
+	<%-- <% String pseudo = request.getAttribute(pseudoCompteActuel);
+				if(pseudo != null){
+					out.println("Bonjour " + pseudo);
+				}%> --%>
+	
 </body>
 </html>
