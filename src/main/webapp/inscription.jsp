@@ -9,17 +9,27 @@
 <title>Inscription</title>
 </head>
 <body>
+
+
+<!-- Il manque encore la verif du mail, sinon niquel -->
+
+
 	<h4>Pour vous inscrire, veuillez remplir le formulaire ci-joint :</h4>
 	<form action="Inscription" method="post" id="champConnexion">
-		<label for="identifiant">Identifiant : </label> <input type="text"
-			name="identifiant" /><br> <label for="mail">Mail : </label> <input
-			type="text" name="mail" /><br> <label for="motdepasse">Mot
-			de passe : </label> <input type="password" name="motdepasse" /><br> <label
-			for="ville">Ville : </label> <input type="text" name="ville" /><br>
+		<label for="identifiant"></label> <input type="text"
+			name="identifiant" placeholder="username"/><br> <label for="mail"></label> <input
+			type="text" name="mail" placeholder="mail"/><br> <label for="motdepasse"></label> <input type="password" name="motdepasse" placeholder="password"/><br> <label
+			for="ville"></label> <input type="text" name="ville" placeholder="ville"/><br>
 		<input type="submit" value="Inscription"></input>
 	</form>
 
-	<a href="PageAccueil" target="_blank">Aller à l'accueil</a>
+
+			<p>			Veuillez renseigner vos identifiants.
+			</p>
+		
+			
+	
+
 	<br>
 
 </body>

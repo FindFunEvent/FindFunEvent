@@ -27,13 +27,13 @@ public class Deconnexion extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.getWriter().append("").append(request.getContextPath());
 		
 		HttpSession session = request.getSession();
 		session.invalidate();
-		request.setAttribute("message", "Vous avez Ã©tÃ© dÃ©connectÃ©");
+		
 
-		this.getServletContext().getRequestDispatcher("/pageAcceuil.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
 
 	}
 

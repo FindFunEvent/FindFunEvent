@@ -53,9 +53,14 @@ public class PageAccueil extends HttpServlet {
 			session.setAttribute("pseudoCompteActuel", compteChoisi.getUsername());
 			session.setAttribute("mailCompteActuel", compteChoisi.getMail());
 			session.setAttribute("villeCompteActuel", compteChoisi.getVille());
+			session.setAttribute("connecte",1);
 //			System.out.println("Test Good");
 		}
-
+		
+		
+		
+		
+		
 		this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
 
 	}
