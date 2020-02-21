@@ -65,6 +65,9 @@ public class GestionCompte {
 
 			// Fermeture session
 			session.close();
+			if (compteSelectionne.size()==0) {
+				return null;
+			}
 			return compteSelectionne.get(0);
 		}
 }

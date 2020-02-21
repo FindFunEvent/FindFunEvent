@@ -17,7 +17,7 @@
 <c:choose>		
 <c:when test="${sessionScope.connecte ==null}">
 	<div>
-		Connectez-vous / <a href=inscription.jsp>Inscrivez-vous</a><br>
+		<p id="message">Connectez-vous / </p><a href=inscription.jsp>Inscrivez-vous</a><br>
 
 
 		<form action="PageAccueil" method="post" id="champConnexion">

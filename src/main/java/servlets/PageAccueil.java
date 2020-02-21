@@ -22,7 +22,7 @@ import services.GestionCompte;
 
 public class PageAccueil extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	List<Compte> listeCompte = new ArrayList<Compte>();
+	
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -56,9 +56,10 @@ public class PageAccueil extends HttpServlet {
 			session.setAttribute("connecte",1);
 //			System.out.println("Test Good");
 		}
-		
-		
-		
+		else {
+			this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
+
+		}
 		
 		
 		this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
@@ -73,6 +74,25 @@ public class PageAccueil extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+	}
+	
+	
+	public boolean verifConnexion(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		boolean connexionValide = false;
+		if (connexionValide == false) {
+			String username = request.getParameter("identifiant");
+			String password = request.getParameter("motdepasse");
+			
+
+			if (!username.equals("") && !password.equals("")) {
+				connexionValide = true;
+			
+			}
+			if (username.equals("") || password.equals("")) {
+				System.out.println("Test");
+			}
+		}
+		return connexionValide;
 	}
 
 }
