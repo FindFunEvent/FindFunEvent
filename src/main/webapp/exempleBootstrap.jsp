@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <head>
-    <title>Part 8 Ex 1</title>
+    <title>FindFunEvent</title>
     <link href="CSS\bootstrap\bootstrap.min.css" rel="stylesheet" />
     <style>
     
@@ -13,7 +15,7 @@
     color: white;}
     
     #recherche{
-    text-align: center;}
+    margin : 10px 120px 20px 0;}
     
     </style>
 </head>
@@ -29,15 +31,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="Part08_ex01v0.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="Part08_ex01v0.html">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Part08_ex02v0.html">Carousel</a>
+                    <a class="nav-link" href="Part08_ex02v0.html">Events</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        Préférences
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Action</a>
@@ -57,19 +59,69 @@
             </form>
             </div>
             
+            
+            
+            
+            
+            
+            
+            
+<c:choose>		
+<c:when test="${sessionScope.connecte ==null}">
+
             <div>
-		<p id="message">Connectez-vous / <a href=inscription.jsp>Inscrivez-vous</a></p>
+		<p id="message">Connectez-vous / <a href=inscriptionBootstrap.jsp>Inscrivez-vous</a></p>
 
 
 		<form action="PageAccueil" method="post" id="champConnexion">
 			<label for="id"></label> 
 			<input type="text" name="id"
 				id="id" placeholder="username"/><br> <label for="mp"></label> 
-				<input type="password" name="mp" placeholder="password"/><br> <label for="Envoyer"></label>
+				<input type="password" name="mp" placeholder="password"/><br> 
+				<label for="Envoyer"></label>
 			<input type="submit" value="Connexion" id="Envoyer"></input>
 
 		</form>
 	</div>
+	
+	</c:when>
+		</c:choose>
+	<div id="message">
+		<br>
+		
+		<!-- L'attribut "connecte"=1 signifie que l'utilisateur est bien connecté : affichage de message de bienvenue (sinon, affiche Veuillez renseigner vos identifiants) -->
+		<c:choose>
+			<c:when test="${sessionScope.connecte ==1}">Bonjour 
+			<c:out value="${sessionScope.pseudoCompteActuel}"/> (connecté)</c:when>
+			<c:when test="${sessionScope.connecte!=1}"></c:when>
+		</c:choose>
+		
+				<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
+<c:choose>
+			<c:when test="${sessionScope.connecte !=null}">
+		<form action="Deconnexion" method="post" id="champDeconnexion">
+			
+			<input type="submit" value="Deconnexion" id="Envoyer"></input>
+		</form>
+			</c:when>
+			
+		</c:choose>
+	</div>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
         </div>
     </nav>
 
@@ -81,28 +133,28 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="image\Ccg9vdw.jpg" class="d-block w-100" alt="image\Ccg9vdw.jpg">
+            <img src="image\francecroatie.jpg" class="d-block w-100" alt="image\Ccg9vdw.jpg">
             <div class="carousel-caption d-none d-md-block">
-              <h5>NBA legends</h5>
+              <h5>Champion 2018</h5>
               <p>Le fameux tirage de langue de Mike</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="image\mike_scott_nba_playoffs_nba_101668_1920x1080.jpg" class="d-block w-100" alt="image\Lonely-island-the-island-s-three-palm-trees_1920x1080.jpg">
+            <img src="image\cr7.jpg" class="d-block w-100" alt="image\Lonely-island-the-island-s-three-palm-trees_1920x1080.jpg">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Gros tomar</h5>
+              <h5>Champion 1998</h5>
               <p>Posterisation coming soon</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="image\jeremy_evans_basketball_player_nba_utah_jazz_98105_1920x1080.jpg" class="d-block w-100" alt="image\090727122545_76.jpg">
+            <img src="image\haaland.jpg" class="d-block w-100" alt="image\090727122545_76.jpg">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Dunk spectaculaires</h5>
+              <h5>CR7</h5>
               <p>Les basketteurs de la NBA assurent le spectacle !</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="image\videos-les-discours-dintronisati.jpg" class="d-block w-100" alt="image\depositphotos_56179963-stock-video-small-desert-island-with-palm.jpg">
+            <img src="image\Ccg9vdw.jpg" class="d-block w-100" alt="image\depositphotos_56179963-stock-video-small-desert-island-with-palm.jpg">
             <div class="carousel-caption d-none d-md-block">
               <h5>Le grand Shaq</h5>
               <p>Attention chient très méchant</p>

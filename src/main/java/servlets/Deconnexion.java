@@ -33,7 +33,7 @@ public class Deconnexion extends HttpServlet {
 		session.invalidate();
 		
 
-		this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/exempleBootstrap.jsp").forward(request, response);
 
 	}
 

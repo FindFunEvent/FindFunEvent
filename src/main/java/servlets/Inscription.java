@@ -37,11 +37,11 @@ public class Inscription extends HttpServlet {
 
 		if(verifInscription(request,response)==true) {
 			
-			this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
+			this.getServletContext().getRequestDispatcher("/exempleBootstrap.jsp").forward(request, response);
 				}
 		if(verifInscription(request,response)==false) { 
 			session.setAttribute("verif", 1);
-			this.getServletContext().getRequestDispatcher("/inscription.jsp").forward(request, response);
+			this.getServletContext().getRequestDispatcher("/inscriptionBootstrap.jsp").forward(request, response);
 			
 			
 		}
