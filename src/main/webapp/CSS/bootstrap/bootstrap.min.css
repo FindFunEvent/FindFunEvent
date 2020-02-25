@@ -9,13 +9,7 @@
 
 
 body {
-padding: 60px;
- height: 100% ;
- width: 100% ;
- background-image: url(../../image/france-bresil.jpg);
-margin-left: auto; margin-right: auto;
-background-repeat: no-repeat;
- 
+
 }
 #login .container #login-row #login-column #login-box {
   margin-top: 0px;
