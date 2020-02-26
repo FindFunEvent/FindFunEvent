@@ -4,11 +4,13 @@
 <%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
-<link href="CSS/bootstrap/bootstrap.min.css" rel="stylesheet">
+
 
 <head>
 
+<head>
 
+<link href="CSS/inscription.css" rel="stylesheet" type="text/css">
 
 
 
@@ -20,14 +22,14 @@
 
 <body>
     <div id="login">
-        <h3 class="text-center text-white pt-5">Login form</h3>
+        <h3 class="text-center text-white pt-5"></h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                    
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="Inscription" method="post">
-                            <h3 class="text-center text-info">Inscription</h3>
+                            <h3 id="inscription"><b>Inscription</b></h3>
                             <div class="form-group">
                                 <label for="username" class="text-info" ></label><br>
                                 <input type="text" placeholder="username"name="identifiant" id="username" class="form-control">
@@ -41,12 +43,16 @@
                                 <input type="text" name="mail" id="mail" placeholder="mail" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="ville" class="text-info" ></label><br>
-                                <input type="text" name="ville" id="ville" placeholder="ville" class="form-control">
+                                <label for="club" class="text-info" ></label><br>
+                                <input type="text" name="club" id="club" placeholder="club de coeur" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="selection" class="text-info" ></label><br>
+                                <input type="text" name="selection" id="selection" placeholder="sélection nationale" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="remember-me" class="text-info"></label><br>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Prends ta license champion">
                             </div>
                           
                         </form>

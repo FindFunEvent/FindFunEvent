@@ -63,15 +63,16 @@ public class Inscription extends HttpServlet {
 			String username = request.getParameter("identifiant");
 			String mail = request.getParameter("mail");
 			String password = request.getParameter("motdepasse");
-			String ville = request.getParameter("ville");
+			String club = request.getParameter("club");
+			String selection = request.getParameter("selection");
 
-			if (!username.equals("") && !mail.equals("") && !password.equals("") && !ville.equals("")) {
+			if (!username.equals("") && !mail.equals("") && !password.equals("") && !club.equals("")&& !selection.equals("")) {
 				inscriptionValide = true;
-				beans.Compte compte = (beans.Compte) new Compte(username, password, mail, ville);
+				beans.Compte compte = (beans.Compte) new Compte(username, password, mail, club,selection);
 				GestionCompte.creationCompte(compte);
 				System.out.println("infos bien enregistrées " + compte.toString());
 			}
-			if (username.equals("") || mail.equals("") || password.equals("") || ville.equals("")) {
+			if (username.equals("") || mail.equals("") || password.equals("") || club.equals("")|| selection.equals("")) {
 				System.out.println("Test");
 			}
 		}

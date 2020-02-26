@@ -34,7 +34,7 @@
                     <a class="nav-link" href="Part08_ex01v0.html">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Part08_ex02v0.html">Events</a>
+                    <a class="nav-link" href="Part08_ex02v0.html">Calendrier</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -42,8 +42,8 @@
                         Préférences
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Mon club</a>
+                        <a class="dropdown-item" href="#">Ma sélection Nationale</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>

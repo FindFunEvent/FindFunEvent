@@ -52,7 +52,8 @@ public class PageAccueil extends HttpServlet {
 		if (compteChoisi != null){
 			session.setAttribute("pseudoCompteActuel", compteChoisi.getUsername());
 			session.setAttribute("mailCompteActuel", compteChoisi.getMail());
-			session.setAttribute("villeCompteActuel", compteChoisi.getVille());
+			session.setAttribute("clubCompteActuel", compteChoisi.getClub());
+			session.setAttribute("selectionCompteActuel", compteChoisi.getSelection());
 			session.setAttribute("connecte",1);
 //			System.out.println("Test Good");
 		}
