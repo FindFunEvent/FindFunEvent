@@ -4,12 +4,12 @@
 <%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
-<link href="CSS/bootstrap/bootstrap.min.css" rel="stylesheet">
+
 
 
 <head>
 
-
+<link href="CSS/inscription.css" rel="stylesheet" type="text/css">
 
 
 

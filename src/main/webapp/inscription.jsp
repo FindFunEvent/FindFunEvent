@@ -5,8 +5,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="CSS/inscription.css" rel="stylesheet" type="text/css">
 <meta charset="ISO-8859-1">
 <title>Inscription</title>
+
 </head>
 <body>
 
