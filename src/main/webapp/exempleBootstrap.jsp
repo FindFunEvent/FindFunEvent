@@ -175,66 +175,9 @@
       </div>
     
     <div id="content">
-        <p class="alert alert-danger">Here is the code</p>
+        <p class="alert alert-danger"></p>
     </div>
-    <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="card" style="width: 18rem;">
-                <img src="image\celtics.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Boston Celtics</h5>
-                  <p class="card-text">17 titres de champions sur 21 finales jouées.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            
-          </div>
-          <div class="col-sm-4">
-            <div class="card" style="width: 18rem;">
-                <img src="image\sans-titre.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">San Antonio Spurs</h5>
-                  <p class="card-text"></p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-          </div>
-        </div>
-          <div class="col-sm-4">
-            <div class="card" style="width: 18rem;">
-                <img src="image\thumb-1920-894722.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Los Angeles Lakers</h5>
-                  <p class="card-text">16 titres de champions sur 31 finales jouées.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-          </div>
-        </div>
-      </div>
-    </div>
-      <!-- Footer -->
-<footer class="page-footer font-small mdb-color darken-3 pt-4">
-
-    <!-- Footer Elements -->
-    <div class="container">
-  
-      <!--Grid row-->
-      <div class="row d-flex justify-content-center">
-  
-        <!--Grid column-->
-        <div class="col-md-6">
-  
-          <!-- Video -->
-          <div class="embed-responsive embed-responsive-16by9 mb-4">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ASGBDmZj6o0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          </div>
-  
-        </div>
-        <!--Grid column-->
-  
-      </div>
-      <!--Grid row-->
-  
-    </div>
+    
     <!-- Footer Elements -->
   
     <!-- Copyright -->
