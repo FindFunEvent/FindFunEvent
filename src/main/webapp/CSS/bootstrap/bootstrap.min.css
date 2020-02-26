@@ -7,7 +7,7 @@
 /*# sourceMappingURL=bootstrap.min.css.map */
 
 
-#login .container #login-row #login-column #login-box {
+ #login .container #login-row #login-column #login-box {
   margin-top: 0px;
   max-width: 600px;
   height: 460px;
@@ -15,8 +15,12 @@
 
 }
 #login .container #login-row #login-column #login-box #login-form {
-  padding: 20px;
+padding: 20px; 
 }
 #login .container #login-row #login-column #login-box #login-form #register-link {
   margin-top: -85px; 
+}
+ 
+#formulaireConnexion{
+	text-align: right;
 }

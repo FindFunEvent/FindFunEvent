@@ -8,16 +8,8 @@
 
 <head>
     <title>FindFunEvent</title>
-    <link href="CSS\bootstrap\bootstrap.min.css" rel="stylesheet" />
-    <style>
+  <link href="CSS/pageAccueil.css" rel="stylesheet" />
     
-    #message{
-    color: white;}
-    
-    #recherche{
-    margin : 10px 120px 20px 0;}
-    
-    </style>
 </head>
 
 <body>
@@ -28,7 +20,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+	
+		
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <% if (session.getAttribute("connecte")!=null){ %>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="Part08_ex01v0.html">Accueil <span class="sr-only">(current)</span></a>
@@ -58,18 +53,19 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
             </div>
+            </div>
+        
+     <% } %>       
             
             
             
+           
             
-            
-            
-            
-            
+           
 <c:choose>		
 <c:when test="${sessionScope.connecte ==null}">
 
-            <div>
+            <div class="message">
 		<p id="message">Connectez-vous / <a href=inscriptionBootstrap.jsp>Inscrivez-vous</a></p>
 
 
@@ -86,7 +82,7 @@
 	
 	</c:when>
 		</c:choose>
-	<div id="message">
+	<div class="message">
 		<br>
 		
 		<!-- L'attribut "connecte"=1 signifie que l'utilisateur est bien connecté : affichage de message de bienvenue (sinon, affiche Veuillez renseigner vos identifiants) -->
@@ -111,22 +107,11 @@
 		</c:choose>
 	</div>
 
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-        </div>
     </nav>
+    
+    
+    
+    
 
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
