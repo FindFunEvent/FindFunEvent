@@ -1,7 +1,6 @@
 package servlets;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -9,15 +8,15 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Deconnexion
+ * Servlet implementation class ModifierProfil
  */
-public class Deconnexion extends HttpServlet {
+public class ModifierProfil extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Deconnexion() {
+    public ModifierProfil() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,13 +27,9 @@ public class Deconnexion extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("").append(request.getContextPath());
-		
+
 		HttpSession session = request.getSession();
-		session.invalidate();
-		
-
-		this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
-
+		this.getServletContext().getRequestDispatcher("/modifierProfil.jsp").forward(request, response);
 	}
 
 	/**

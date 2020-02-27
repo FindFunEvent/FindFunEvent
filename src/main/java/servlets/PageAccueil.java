@@ -58,12 +58,12 @@ public class PageAccueil extends HttpServlet {
 //			System.out.println("Test Good");
 		}
 		else {
-			this.getServletContext().getRequestDispatcher("/exempleBootstrap.jsp").forward(request, response);
+			this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
 
 		}
 		
 		
-		this.getServletContext().getRequestDispatcher("/exempleBootstrap.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
 
 	}
 

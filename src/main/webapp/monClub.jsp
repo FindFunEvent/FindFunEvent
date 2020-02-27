@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-  pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page isELIgnored="false"%>
 <!DOCTYPE html>
@@ -7,21 +7,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <head>
-    <title>FindFunEvent - Calendrier</title>
-    <link href="CSS\calendrier.css" rel="stylesheet" />
-    <style>
-    
-    #message{
-    color: white;}
-    
-    #recherche{
-    margin : 10px 120px 20px 0;}
-    
-    </style>
+<title>FindFunEvent - Mon Club</title>
+<link href="CSS/pageAccueil.css" rel="stylesheet" />
+
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 		<a class="navbar-brand" href="PageAccueil">FindFunEvent</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
@@ -135,149 +128,37 @@
 
 
 	</nav>
-	
+
+
+
 
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-  <!-- inspired by http://colorhunt.co/c/8184 and 
-    https://dribbble.com/shots/2407357-Calendar%60 -->
 
-    <div class="container">
-      <div class="calendar">
-        <div class="front">
-          <div class="current-date">
-            <h1>Friday 15th</h1>
-            <h1>January 2016</h1>	
-          </div>
+	<div id="content">
+		<p class="alert alert-danger"></p>
+	</div>
 
-          <div class="current-month">
-            <ul class="week-days">
-              <li>MON</li>
-              <li>TUE</li>
-              <li>WED</li>
-              <li>THU</li>
-              <li>FRI</li>
-              <li>SAT</li>
-              <li>SUN</li>
-            </ul>
+	<!-- Footer Elements -->
 
-            <div class="weeks">
-              <div class="first">
-                <span class="last-month">28</span>
-                <span class="last-month">29</span>
-                <span class="last-month">30</span>
-                <span class="last-month">31</span>
-                <span>01</span>
-                <span>02</span>
-                <span>03</span>
-              </div>
+	<!-- Copyright -->
+	<div class="footer-copyright text-center py-3">
+		© 2020 Copyright: <a
+			href="https://mdbootstrap.com/education/bootstrap/">
+			MDBootstrap.com</a>
+	</div>
+	<!-- Copyright -->
 
-              <div class="second">
-                <span>04</span>
-                <span>05</span>
-                <span class="event">06</span>
-                <span>07</span>
-                <span>08</span>
-                <span>09</span>
-                <span>10</span>
-              </div>
+	
 
-              <div class="third">
-                <span>11</span>
-                <span>12</span>
-                <span>13</span>
-                <span>14</span>
-                <span class="active">15</span>
-                <span>16</span>
-                <span>17</span>
-              </div>
-
-              <div class="fourth">
-                <span>18</span>
-                <span>19</span>
-                <span>20</span>
-                <span>21</span>
-                <span>22</span>
-                <span>23</span>
-                <span>24</span>
-              </div>
-
-              <div class="fifth">
-                <span>25</span>
-                <span>26</span>
-                <span>27</span>
-                <span>28</span>
-                <span>29</span>
-                <span>30</span>
-                <span>31</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="back">
-          <input placeholder="What's the event?">
-          <div class="info">
-            <div class="date">
-              <p class="info-date">
-              Date: <span>Jan 15th, 2016</span>
-              </p>
-              <p class="info-time">
-                Time: <span>6:35 PM</span>
-              </p>
-            </div>
-            <div class="address">
-              <p>
-                Address: <span>129 W 81st St, New York, NY</span>
-              </p>
-            </div>
-            <div class="observations">
-              <p>
-                Observations: <span>Be there 15 minutes earlier</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="actions">
-            <button class="save">
-              Save <i class="ion-checkmark"></i>
-            </button>
-            <button class="dismiss">
-              Dismiss <i class="ion-android-close"></i>
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-<br><script src="js/calendar.js"></script></br>
-<footer class="page-footer font-small mdb-color darken-3 pt-4">
-  </footer>
-  <!-- Footer -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="js/bootstrap\bootstrap.bundle.min.js"></script>
+	<!-- Footer -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="js/bootstrap\bootstrap.bundle.min.js"></script>
 </body>
-    </html>
+
+</html>
