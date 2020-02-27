@@ -100,13 +100,6 @@
 			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
 			</c:when>
 			</c:choose>
-			<script>
-				var login = <c:out value="${sessionScope.connecte}"/>
-				if (login == 1) {
-					alert("Vous êtes connecté")
-				}
-			</script>
-
 
 			<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
 			<c:choose>
@@ -182,6 +175,39 @@
 		<p class="alert alert-danger"></p>
 	</div>
 
+	<div class="content">
+		<!--Grid row-->
+		<div class="row d-flex justify-content-center">
+			<!--Grid column-->
+			<div class="col-md-3">
+				<!-- Video -->
+				<div class="embed-responsive embed-responsive-16by9 mb-4">
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/l8VurW-_na0" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<!-- Video -->
+				<div class="embed-responsive embed-responsive-16by9 mb-4">
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/G-VYwC28KXI" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<!-- Video -->
+				<div class="embed-responsive embed-responsive-16by9 mb-4">
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/7wZbcCxBP3c" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- Footer Elements -->
 
 	<!-- Copyright -->
@@ -192,23 +218,15 @@
 	</div>
 	<!-- Copyright -->
 
-	<div class="container">
-		<!--Grid row-->
-		<div class="row d-flex justify-content-center">
-			<!--Grid column-->
-			<div class="col-md-6">
-				<!-- Video -->
-				<div class="embed-responsive embed-responsive-16by9 mb-4">
-					<iframe width="560" height="315"
-						src="https://www.youtube.com/embed/l8VurW-_na0" frameborder="0"
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<!-- Footer -->
+	<script>
+		var login = <c:out value="${sessionScope.erreur}"/>
+			var reussi = <c:out value="${sessionScope.connecte}"/>
+		if (login == 1) {
+			alert("Informations fausses ou incomplètes")
+		}
+
+	</script>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
 		crossorigin="anonymous"></script>

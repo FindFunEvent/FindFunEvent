@@ -57,7 +57,7 @@ public class PageAccueil extends HttpServlet {
 			session.setAttribute("connecte",1);
 //			System.out.println("Test Good");
 		}
-		else {
+		else if(compteChoisi == null) {
 			this.getServletContext().getRequestDispatcher("/exempleBootstrap.jsp").forward(request, response);
 
 		}
@@ -91,6 +91,7 @@ public class PageAccueil extends HttpServlet {
 			}
 			if (username.equals("") || password.equals("")) {
 				System.out.println("Test");
+				
 			}
 		}
 		return connexionValide;
