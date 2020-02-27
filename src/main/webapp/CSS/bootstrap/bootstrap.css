@@ -59,7 +59,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  text-align: left;
+  text-align: center;
   background-color: #fff;
 }
 
@@ -209,7 +209,7 @@ caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   color: #6c757d;
-  text-align: left;
+  text-align: center;
   caption-side: bottom;
 }
 
@@ -3227,7 +3227,7 @@ input[type="button"].btn-block {
   margin: 0.125rem 0 0;
   font-size: 1rem;
   color: #212529;
-  text-align: left;
+  text-align: center;
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
@@ -6135,7 +6135,7 @@ a.close.disabled {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
-  text-align: left;
+  text-align: center;
   text-align: start;
   text-decoration: none;
   text-shadow: none;
@@ -6248,7 +6248,7 @@ a.close.disabled {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
-  text-align: left;
+  text-align: center;
   text-align: start;
   text-decoration: none;
   text-shadow: none;

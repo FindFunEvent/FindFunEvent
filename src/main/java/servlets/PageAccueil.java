@@ -93,7 +93,7 @@ public class PageAccueil extends HttpServlet {
 				System.out.println("Test");
 				
 			}
-		}
+		} 
 		return connexionValide;
 	}
 
