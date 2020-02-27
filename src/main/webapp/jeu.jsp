@@ -8,7 +8,7 @@
 
 <head>
     <title>FindFunEvent - Jeu</title>
-    <link href="CSS\bootstrap\bootstrapCalendrier.css" rel="stylesheet" />
+    <link href="CSS\bootstrap\bootstrapJeu.css" rel="stylesheet" />
     <style>
     
     #message{
@@ -114,7 +114,12 @@
 	
         </div>
     </nav>
-    
+    <div>
+    <canvas id="canvas" width="700" height="500"></canvas>
+		<div id="out"></div>
+		<script type="text/javascript" src="js/jeu.js"></script>	
+  </div>
+
     <footer class="page-footer font-small mdb-color darken-3 pt-4">
   </footer>
   <!-- Footer -->
@@ -123,4 +128,5 @@
 <script src="js/bootstrap\bootstrap.bundle.min.js"></script>
 </body>
     </html>
+    
 	

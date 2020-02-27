@@ -92,7 +92,7 @@ public class PageAccueil extends HttpServlet {
 			if (username.equals("") || password.equals("")) {
 				System.out.println("Test");
 			}
-		}
+		} 
 		return connexionValide;
 	}
 
