@@ -7,17 +7,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <head>
+
     <title>FindFunEvent - Calendrier</title>
     <link href="CSS\bootstrap\bootstrap.min.css" rel="stylesheet" />
-    <style>
+
+    <title>FindFunEvent</title>
+  <link href="CSS/pageAccueil.css" rel="stylesheet" />
+
     
-    #message{
-    color: white;}
-    
-    #recherche{
-    margin : 10px 120px 20px 0;}
-    
-    </style>
 </head>
 
 <body>
@@ -28,7 +25,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+	
+		
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <% if (session.getAttribute("connecte")!=null){ %>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="PageAccueil">Accueil <span class="sr-only">(current)</span></a>
@@ -58,18 +58,19 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
             </div>
+            </div>
+        
+     <% } %>       
             
             
             
+           
             
-            
-            
-            
-            
+           
 <c:choose>		
 <c:when test="${sessionScope.connecte ==null}">
 
-            <div>
+            <div class="message">
 		<p id="message">Connectez-vous / <a href=inscriptionBootstrap.jsp>Inscrivez-vous</a></p>
 
 
@@ -86,7 +87,7 @@
 	
 	</c:when>
 		</c:choose>
-	<div id="message">
+	<div class="message">
 		<br>
 		
 		<!-- L'attribut "connecte"=1 signifie que l'utilisateur est bien connecté : affichage de message de bienvenue (sinon, affiche Veuillez renseigner vos identifiants) -->
@@ -111,9 +112,12 @@
 		</c:choose>
 	</div>
 
-	
-        </div>
+
     </nav>
+    
+    
+    
+    
 
 
 
@@ -191,66 +195,9 @@
       </div>
     
     <div id="content">
-        <p class="alert alert-danger">Here is the code</p>
+        <p class="alert alert-danger"></p>
     </div>
-    <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="card" style="width: 18rem;">
-                <img src="image\celtics.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Boston Celtics</h5>
-                  <p class="card-text">17 titres de champions sur 21 finales jouées.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            
-          </div>
-          <div class="col-sm-4">
-            <div class="card" style="width: 18rem;">
-                <img src="image\sans-titre.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">San Antonio Spurs</h5>
-                  <p class="card-text"></p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-          </div>
-        </div>
-          <div class="col-sm-4">
-            <div class="card" style="width: 18rem;">
-                <img src="image\thumb-1920-894722.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Los Angeles Lakers</h5>
-                  <p class="card-text">16 titres de champions sur 31 finales jouées.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-          </div>
-        </div>
-      </div>
-    </div>
-      <!-- Footer -->
-<footer class="page-footer font-small mdb-color darken-3 pt-4">
-
-    <!-- Footer Elements -->
-    <div class="container">
-  
-      <!--Grid row-->
-      <div class="row d-flex justify-content-center">
-  
-        <!--Grid column-->
-        <div class="col-md-6">
-  
-          <!-- Video -->
-          <div class="embed-responsive embed-responsive-16by9 mb-4">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ASGBDmZj6o0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          </div>
-  
-        </div>
-        <!--Grid column-->
-  
-      </div>
-      <!--Grid row-->
-  
-    </div>
+    
     <!-- Footer Elements -->
   
     <!-- Copyright -->
@@ -259,7 +206,7 @@
     </div>
     <!-- Copyright -->
   
-  </footer>
+  
   <!-- Footer -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
