@@ -28,12 +28,6 @@
   	<description></description>
   	<servlet-class>servlets.PageCalendrier</servlet-class>
   </servlet>
-  <servlet>
-  	<servlet-name>Jeu</servlet-name>
-  	<display-name>Jeu</display-name>
-  	<description></description>
-  	<servlet-class>servlets.Jeu</servlet-class>
-  </servlet>
   <servlet-mapping>
   	<servlet-name>PageAccueil</servlet-name>
   	<url-pattern>/PageAccueil</url-pattern>
@@ -49,9 +43,5 @@
   <servlet-mapping>
   	<servlet-name>PageCalendrier</servlet-name>
   	<url-pattern>/PageCalendrier</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>Jeu</servlet-name>
-  	<url-pattern>/Jeu</url-pattern>
   </servlet-mapping>
 </web-app>
