@@ -20,14 +20,14 @@ import services.GestionCompte;
  * Servlet implementation class Basic
  */
 
-public class PageAccueil extends HttpServlet {
+public class PageCalendrier extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public PageAccueil() {
+	public PageCalendrier() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -58,12 +58,12 @@ public class PageAccueil extends HttpServlet {
 //			System.out.println("Test Good");
 		}
 		else {
-			this.getServletContext().getRequestDispatcher("/exempleBootstrap.jsp").forward(request, response);
+			this.getServletContext().getRequestDispatcher("/calendrier.jsp").forward(request, response);
 
 		}
 		
 		
-		this.getServletContext().getRequestDispatcher("/exempleBootstrap.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/calendrier.jsp").forward(request, response);
 
 	}
 

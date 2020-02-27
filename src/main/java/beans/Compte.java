@@ -17,7 +17,8 @@ public class Compte {
 	private String username;
 	private String password;
 	private String mail;
-	private String ville;
+	private String club;
+	private String selection;
 
 	// Setters & getters
 	public int getId() {
@@ -52,30 +53,48 @@ public class Compte {
 		this.mail = mail;
 	}
 
-	public String getVille() {
-		return ville;
-	}
-
-	public void setVille(String ville) {
-		this.ville = ville;
-	}
+	
 
 	// Constructeurs
-	public Compte() {
-		super();
-	}
-
-	public Compte(String username, String password, String mail, String ville) {
+	public Compte(String username, String password, String mail, String club, String selection) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.mail = mail;
-		this.ville = ville;
+		this.club = club;
+		this.selection = selection;
 	}
+	
+	public Compte() {
+		super();
+	}
+
+	public String getClub() {
+		return club;
+	}
+
+	public void setClub(String club) {
+		this.club = club;
+	}
+
+	public String getSelection() {
+		return selection;
+	}
+
+	public void setSelection(String selection) {
+		this.selection = selection;
+	}
+
+	@Override
+	public String toString() {
+		return "Compte [id=" + id + ", username=" + username + ", password=" + password + ", mail=" + mail + ", club="
+				+ club + ", selection=" + selection + "]";
+	}
+
+	
+
+
 	
 	//Méthodes
-	public String toString() {
-		return "Compte [username=" + username + ", password=" + password + ", mail=" + mail + ", ville=" + ville + "]";
-	}
-	
+
 }

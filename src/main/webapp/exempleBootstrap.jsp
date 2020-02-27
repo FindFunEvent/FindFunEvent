@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+  pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page isELIgnored="false"%>
 <!DOCTYPE html>
@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <head>
-    <title>FindFunEvent</title>
+    <title>FindFunEvent - Calendrier</title>
     <link href="CSS\bootstrap\bootstrap.min.css" rel="stylesheet" />
     <style>
     
@@ -22,7 +22,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="Part08_ex01v0.html">FindFunEvent</a>
+        <a class="navbar-brand" href="PageAccueil">FindFunEvent</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,10 +31,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="Part08_ex01v0.html">Accueil <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="PageAccueil">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Part08_ex02v0.html">Events</a>
+                    <a class="nav-link" href=PageCalendrier>Calendrier</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -42,10 +42,10 @@
                         Préférences
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Mon club</a>
+                        <a class="dropdown-item" href="#">Ma sélection Nationale</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="Pagejeu">En attendant la fin du match</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -92,15 +92,18 @@
 		<!-- L'attribut "connecte"=1 signifie que l'utilisateur est bien connecté : affichage de message de bienvenue (sinon, affiche Veuillez renseigner vos identifiants) -->
 		<c:choose>
 			<c:when test="${sessionScope.connecte ==1}">Bonjour 
-			<c:out value="${sessionScope.pseudoCompteActuel}"/> (connecté)</c:when>
-			<c:when test="${sessionScope.connecte!=1}"></c:when>
+			<c:out value="${sessionScope.pseudoCompteActuel}"/> (connecté)
+			</c:when>
 		</c:choose>
+		<script>var login=<c:out value="${sessionScope.connecte}"/>
+		if (login==1){
+			alert("Vous êtes connecté")}</script>
+		
 		
 				<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
 <c:choose>
 			<c:when test="${sessionScope.connecte !=null}">
 		<form action="Deconnexion" method="post" id="champDeconnexion">
-			
 			<input type="submit" value="Deconnexion" id="Envoyer"></input>
 		</form>
 			</c:when>
@@ -108,22 +111,38 @@
 		</c:choose>
 	</div>
 
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
         </div>
     </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
