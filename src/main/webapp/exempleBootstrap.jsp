@@ -217,7 +217,7 @@
 			MDBootstrap.com</a>
 	</div>
 	<!-- Copyright -->
-
+	
 	<!-- Footer -->
 	<script>
 		var login = <c:out value="${sessionScope.erreur}"/>
