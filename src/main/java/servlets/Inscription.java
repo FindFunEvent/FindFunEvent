@@ -34,12 +34,12 @@ public class Inscription extends HttpServlet {
 
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		HttpSession session = request.getSession();
-		boolean verif = verifInscription(request,response);
-		if(verif==true) {
+
+		if(verifInscription(request,response)==true) {
 			
-			this.getServletContext().getRequestDispatcher("/exempleBootstrap.jsp").forward(request, response);
+			this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
 				}
-		if(verif==false) { 
+		if(verifInscription(request,response)==false) { 
 			session.setAttribute("verif", 1);
 			this.getServletContext().getRequestDispatcher("/inscriptionBootstrap.jsp").forward(request, response);
 			

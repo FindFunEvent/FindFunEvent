@@ -57,13 +57,15 @@ public class PageAccueil extends HttpServlet {
 			session.setAttribute("connecte",1);
 //			System.out.println("Test Good");
 		}
-		else if(compteChoisi == null) {
-			this.getServletContext().getRequestDispatcher("/exempleBootstrap.jsp").forward(request, response);
+
+		else {
+			this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
+
 
 		}
 		
 		
-		this.getServletContext().getRequestDispatcher("/exempleBootstrap.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
 
 	}
 

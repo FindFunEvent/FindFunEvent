@@ -5,17 +5,18 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class PageJeu
+ * Servlet implementation class AfficherProfil
  */
-public class PageJeu extends HttpServlet {
+public class AfficherProfil extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public PageJeu() {
+    public AfficherProfil() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +27,9 @@ public class PageJeu extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("").append(request.getContextPath());
-		this.getServletContext().getRequestDispatcher("/jeu.jsp").forward(request, response);
+
+		HttpSession session = request.getSession();
+		this.getServletContext().getRequestDispatcher("/afficherProfil.jsp").forward(request, response);
 	}
 
 	/**
