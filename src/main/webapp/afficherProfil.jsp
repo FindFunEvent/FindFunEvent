@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <head>
-<title>FindFunEvent</title>
+<title>FindFunEvent - News</title>
 <link href="CSS/pageAccueil.css" rel="stylesheet" />
 
 
@@ -45,7 +45,7 @@
 						<a class="dropdown-item" href="MonClub">Mon club</a> <a
 							class="dropdown-item" href="MaSelection">Ma sélection Nationale</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="Pagejeu">En attendant la fin du
+						<a class="dropdown-item" href="PageJeu">En attendant la fin du
 							match</a>
 					</div></li>
 				<li class="nav-item dropdown"><a
@@ -56,7 +56,7 @@
 						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a> <a
 							class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="PageJeu">Préférences</a>
+						<a class="dropdown-item" href="Pagejeu">Préférences</a>
 					</div></li>
 			</ul>
 			<div id="recherche">
@@ -107,12 +107,6 @@
 			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
 			</c:when>
 			</c:choose>
-			<script>
-				/* var login = <c:out value="${sessionScope.connecte}"/>
-				if (login == 1) {
-					alert("Vous êtes connecté")
-				} */
-			</script>
 
 
 			<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
@@ -132,58 +126,7 @@
 
 
 
-	<div id="carouselExampleCaptions" class="carousel slide"
-		data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#carouselExampleCaptions" data-slide-to="0"
-				class="active"></li>
-			<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-			<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="image\francecroatie.jpg" class="d-block w-100"
-					alt="image\Ccg9vdw.jpg">
-				<div class="carousel-caption d-none d-md-block">
-					<h5>Champion 2018</h5>
-					<p>Le fameux tirage de langue de Mike</p>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<img src="image\cr7.jpg" class="d-block w-100"
-					alt="image\Lonely-island-the-island-s-three-palm-trees_1920x1080.jpg">
-				<div class="carousel-caption d-none d-md-block">
-					<h5>Champion 1998</h5>
-					<p>Posterisation coming soon</p>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<img src="image\haaland.jpg" class="d-block w-100"
-					alt="image\090727122545_76.jpg">
-				<div class="carousel-caption d-none d-md-block">
-					<h5>CR7</h5>
-					<p>Les basketteurs de la NBA assurent le spectacle !</p>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<img src="image\Ccg9vdw.jpg" class="d-block w-100"
-					alt="image\depositphotos_56179963-stock-video-small-desert-island-with-palm.jpg">
-				<div class="carousel-caption d-none d-md-block">
-					<h5>Le grand Shaq</h5>
-					<p>Attention chient très méchant</p>
-				</div>
-			</div>
-		</div>
-		<a class="carousel-control-prev" href="#carouselExampleCaptions"
-			role="button" data-slide="prev"> <span
-			class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-			class="sr-only">Previous</span>
-		</a> <a class="carousel-control-next" href="#carouselExampleCaptions"
-			role="button" data-slide="next"> <span
-			class="carousel-control-next-icon" aria-hidden="true"></span> <span
-			class="sr-only">Next</span>
-		</a>
-	</div>
+	
 
 	<div id="content">
 		<p class="alert alert-danger"></p>
@@ -197,25 +140,16 @@
 			href="https://mdbootstrap.com/education/bootstrap/">
 			MDBootstrap.com</a>
 	</div>
-	<!-- Copyright -->
-
-	<div class="container">
-		<!--Grid row-->
-		<div class="row d-flex justify-content-center">
-			<!--Grid column-->
-			<div class="col-md-6">
-				<!-- Video -->
-				<div class="embed-responsive embed-responsive-16by9 mb-4">
-					<iframe width="560" height="315"
-						src="https://www.youtube.com/embed/l8VurW-_na0" frameborder="0"
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- Footer -->
+	<script>
+		var login = <c:out value="${sessionScope.erreur}"/>
+			var reussi = <c:out value="${sessionScope.connecte}"/>
+		if (login == 1) {
+			alert("Informations fausses ou incomplètes")
+		}
+
+	</script>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
 		crossorigin="anonymous"></script>

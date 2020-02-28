@@ -34,6 +34,42 @@
   	<description></description>
   	<servlet-class>servlets.PageJeu</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Resultats</servlet-name>
+  	<display-name>Resultats</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Resultats</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>News</servlet-name>
+  	<display-name>News</display-name>
+  	<description></description>
+  	<servlet-class>servlets.News</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AfficherProfil</servlet-name>
+  	<display-name>AfficherProfil</display-name>
+  	<description></description>
+  	<servlet-class>servlets.AfficherProfil</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ModifierProfil</servlet-name>
+  	<display-name>ModifierProfil</display-name>
+  	<description></description>
+  	<servlet-class>servlets.ModifierProfil</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MonClub</servlet-name>
+  	<display-name>MonClub</display-name>
+  	<description></description>
+  	<servlet-class>servlets.MonClub</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MaSelection</servlet-name>
+  	<display-name>MaSelection</display-name>
+  	<description></description>
+  	<servlet-class>servlets.MaSelection</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>PageAccueil</servlet-name>
   	<url-pattern>/PageAccueil</url-pattern>
@@ -53,5 +89,29 @@
   <servlet-mapping>
   	<servlet-name>PageJeu</servlet-name>
   	<url-pattern>/PageJeu</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Resultats</servlet-name>
+  	<url-pattern>/Resultats</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>News</servlet-name>
+  	<url-pattern>/News</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AfficherProfil</servlet-name>
+  	<url-pattern>/AfficherProfil</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ModifierProfil</servlet-name>
+  	<url-pattern>/ModifierProfil</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MonClub</servlet-name>
+  	<url-pattern>/MonClub</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MaSelection</servlet-name>
+  	<url-pattern>/MaSelection</url-pattern>
   </servlet-mapping>
 </web-app>

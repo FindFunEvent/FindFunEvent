@@ -10,11 +10,13 @@
 
 
 
+
 <title>FindFunEvent</title>
 <link href="CSS/news.css" rel="stylesheet" />
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Ubuntu:400,700&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -35,9 +37,12 @@
 				if (session.getAttribute("connecte") != null) {
 			%>
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link"
-					href="PageAccueil">Accueil <span class="sr-only">(current)</span></a>
-				</li>
+
+				   	<a class="nav-link" href="Resultats">Résultats <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="News">News <span class="sr-only">(current)</span></a>
+                </li>
 				<li class="nav-item"><a class="nav-link" href=PageCalendrier>Calendrier</a>
 				</li>
 				<li class="nav-item dropdown"><a
@@ -45,14 +50,24 @@
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Préférences </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Mon club</a> <a
-							class="dropdown-item" href="#">Ma sélection Nationale</a>
+
+						<a class="dropdown-item" href="MonClub">Mon club</a> <a
+							class="dropdown-item" href="MaSelection">Ma sélection Nationale</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="PageJeu">En attendant la fin du
+						<a class="dropdown-item" href="Pagejeu">En attendant la fin du
 							match</a>
 					</div></li>
-				<li class="nav-item"><a class="nav-link disabled" href="#"
-					tabindex="-1" aria-disabled="true">Disabled</a></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> Profil </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a> <a
+							class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="Pagejeu">Préférences</a>
+					</div></li>
+>>>>>>> 5d2b87c85a2d7cffe177f2c99f45ee7ac973818b
 			</ul>
 			<div id="recherche">
 				<form class="form-inline my-2 my-lg-0">
@@ -66,6 +81,7 @@
 		<%
 			}
 		%>
+
 		<c:choose>
 			<c:when test="${sessionScope.connecte ==null}">
 
@@ -97,10 +113,12 @@
 			</c:when>
 			</c:choose>
 			<script>
-				var login = <c:out value="${sessionScope.connecte}"/>
+
+				/* var login = <c:out value="${sessionScope.connecte}"/>
 				if (login == 1) {
 					alert("Vous êtes connecté")
-				}
+				} */
+
 			</script>
 
 
@@ -117,6 +135,7 @@
 
 
 	</nav>
+
 
 
 
@@ -178,6 +197,25 @@
 
 
 
+
+
+	
+
+	<div id="content">
+		<p class="alert alert-danger"></p>
+	</div>
+
+	<!-- Footer Elements -->
+
+	<!-- Copyright -->
+	<div class="footer-copyright text-center py-3">
+		© 2020 Copyright: <a
+			href="https://mdbootstrap.com/education/bootstrap/">
+			MDBootstrap.com</a>
+	</div>
+	<!-- Copyright -->
+
+	
 
 
 	<!-- Footer -->

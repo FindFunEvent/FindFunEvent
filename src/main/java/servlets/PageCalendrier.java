@@ -43,25 +43,6 @@ public class PageCalendrier extends HttpServlet {
 		response.getWriter().append("").append(request.getContextPath());
 
 		HttpSession session = request.getSession();
-
-		String username = request.getParameter("id");
-		String password = request.getParameter("mp");
-//		System.out.println(username);
-//		System.out.println(password);
-		Compte compteChoisi = GestionCompte.recuperationCompte(username, password);
-		if (compteChoisi != null){
-			session.setAttribute("pseudoCompteActuel", compteChoisi.getUsername());
-			session.setAttribute("mailCompteActuel", compteChoisi.getMail());
-			session.setAttribute("clubCompteActuel", compteChoisi.getClub());
-			session.setAttribute("selectionCompteActuel", compteChoisi.getSelection());
-			session.setAttribute("connecte",1);
-//			System.out.println("Test Good");
-		}
-		else {
-			this.getServletContext().getRequestDispatcher("/calendrier.jsp").forward(request, response);
-
-		}
-		
 		
 		this.getServletContext().getRequestDispatcher("/calendrier.jsp").forward(request, response);
 
@@ -75,25 +56,6 @@ public class PageCalendrier extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-	}
-	
-	
-	public boolean verifConnexion(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		boolean connexionValide = false;
-		if (connexionValide == false) {
-			String username = request.getParameter("identifiant");
-			String password = request.getParameter("motdepasse");
-			
-
-			if (!username.equals("") && !password.equals("")) {
-				connexionValide = true;
-			
-			}
-			if (username.equals("") || password.equals("")) {
-				System.out.println("Test");
-			}
-		}
-		return connexionValide;
 	}
 
 }
