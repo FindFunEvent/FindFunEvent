@@ -95,9 +95,7 @@
 			<c:out value="${sessionScope.pseudoCompteActuel}"/> (connecté)
 			</c:when>
 		</c:choose>
-		<script>var login=<c:out value="${sessionScope.connecte}"/>
-		if (login==1){
-			alert("Vous êtes connecté")}</script>
+	
 		
 		
 				<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->

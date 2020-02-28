@@ -107,6 +107,7 @@
 			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
 			</c:when>
 			</c:choose>
+<<<<<<< HEAD:src/main/webapp/afficherProfil.jsp
 			<script>
 				/* var login = <c:out value="${sessionScope.connecte}"/>
 				if (login == 1) {
@@ -114,6 +115,8 @@
 				} */
 			</script>
 
+=======
+>>>>>>> d298ce0ebba5393bf98d178d721b6a7fe12c06f3:src/main/webapp/exempleBootstrap.jsp
 
 			<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
 			<c:choose>
@@ -146,11 +149,16 @@
 			href="https://mdbootstrap.com/education/bootstrap/">
 			MDBootstrap.com</a>
 	</div>
-	<!-- Copyright -->
-
-	
 
 	<!-- Footer -->
+	<script>
+		var login = <c:out value="${sessionScope.erreur}"/>
+			var reussi = <c:out value="${sessionScope.connecte}"/>
+		if (login == 1) {
+			alert("Informations fausses ou incomplètes")
+		}
+
+	</script>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
 		crossorigin="anonymous"></script>

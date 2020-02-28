@@ -105,15 +105,6 @@
 
 			</c:when>
 		</c:choose>
-		<div class="message">
-			<br>
-
-			<!-- L'attribut "connecte"=1 signifie que l'utilisateur est bien connecté : affichage de message de bienvenue (sinon, affiche Veuillez renseigner vos identifiants) -->
-			<c:choose>
-				<c:when test="${sessionScope.connecte ==1}">Bonjour 
-			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
-			</c:when>
-			</c:choose>
 			<script>
 				/* var login = <c:out value="${sessionScope.connecte}"/>
 				if (login == 1) {
@@ -131,8 +122,7 @@
 				</c:when>
 
 			</c:choose>
-		</div>
-
+		
 
 	</nav>
 	
