@@ -7,8 +7,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <head>
-<title>FindFunEvent - News</title>
-<link href="CSS/pageAccueil.css" rel="stylesheet" />
+
+
+
+
+<title>FindFunEvent</title>
+<link href="CSS/news.css" rel="stylesheet" />
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Ubuntu:400,700&display=swap" rel="stylesheet">
 
 
 </head>
@@ -30,6 +37,7 @@
 				if (session.getAttribute("connecte") != null) {
 			%>
 			<ul class="navbar-nav mr-auto">
+
 				   	<a class="nav-link" href="Resultats">Résultats <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
@@ -42,6 +50,7 @@
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Préférences </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
 						<a class="dropdown-item" href="MonClub">Mon club</a> <a
 							class="dropdown-item" href="MaSelection">Ma sélection Nationale</a>
 						<div class="dropdown-divider"></div>
@@ -58,6 +67,7 @@
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="Pagejeu">Préférences</a>
 					</div></li>
+>>>>>>> 5d2b87c85a2d7cffe177f2c99f45ee7ac973818b
 			</ul>
 			<div id="recherche">
 				<form class="form-inline my-2 my-lg-0">
@@ -71,11 +81,6 @@
 		<%
 			}
 		%>
-
-
-
-
-
 
 		<c:choose>
 			<c:when test="${sessionScope.connecte ==null}">
@@ -108,10 +113,12 @@
 			</c:when>
 			</c:choose>
 			<script>
+
 				/* var login = <c:out value="${sessionScope.connecte}"/>
 				if (login == 1) {
 					alert("Vous êtes connecté")
 				} */
+
 			</script>
 
 
@@ -128,6 +135,66 @@
 
 
 	</nav>
+
+
+
+
+
+<section class="section-news">
+		<div class="container">
+			<div class="header-section">
+				<h3 class="small-title"><span></span> Ce qu'il y a de nouveau</h3>
+				<h2 class="title">News toute fraiches</h2>
+			</div>
+			<div class="row">
+				<!-- start single news -->
+				<div class="col-12 col-md-6">
+					<div class="single-news">
+						<a href="#"><img src="https://a.espncdn.com/photo/2020/0227/r672282_1296x729_16-9.jpg" alt=""></a>
+						<div class="content">
+							<span class="date">30 NOV 2019</span>
+							<h3 class="title"><a href="#">Lorem Ipsum is simply dummy text of the printing</a></h3>
+							<p class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+							<span class="author">By Admin</span>
+							<span class="comments">0 Comments</span>
+						</div>
+					</div>
+				</div>
+				<!-- / end single news -->
+				<!-- start single news -->
+				<div class="col-12 col-md-6">
+					<div class="single-news">
+						<a href="#"><img src="https://a.espncdn.com/media/motion/ESPNi/2020/0227/int_200227_inet_fc_declan_rice/int_200227_inet_fc_declan_rice.jpg" alt=""></a>
+						<div class="content">
+							<span class="date">30 NOV 2019</span>
+							<h3 class="title"><a href="#">Lorem Ipsum is simply dummy text of the printing</a></h3>
+							<p class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+							<span class="author">By Admin</span>
+							<span class="comments">0 Comments</span>
+						</div>
+					</div>
+				</div>
+				<!-- / end single news -->
+			</div>
+		</div>
+	</section>
+
+	<!-- / END NEWS SECTION -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -149,6 +216,7 @@
 	<!-- Copyright -->
 
 	
+
 
 	<!-- Footer -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
