@@ -30,11 +30,12 @@
 				if (session.getAttribute("connecte") != null) {
 			%>
 			<ul class="navbar-nav mr-auto">
-				   	<a class="nav-link" href="Resultats">Résultats <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="News">News <span class="sr-only">(current)</span></a>
-                </li>
+				<a class="nav-link" href="Resultats">Résultats <span
+					class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active"><a class="nav-link" href="News">News
+						<span class="sr-only">(current)</span>
+				</a></li>
 				<li class="nav-item"><a class="nav-link" href=PageCalendrier>Calendrier</a>
 				</li>
 				<li class="nav-item dropdown"><a
@@ -43,7 +44,8 @@
 					aria-expanded="false"> Préférences </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="MonClub">Mon club</a> <a
-							class="dropdown-item" href="MaSelection">Ma sélection Nationale</a>
+							class="dropdown-item" href="MaSelection">Ma sélection
+							Nationale</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="Pagejeu">En attendant la fin du
 							match</a>
@@ -53,8 +55,8 @@
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Profil </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a> <a
-							class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
+						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a>
+						<a class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="PageJeu">Préférences</a>
 					</div></li>
@@ -199,20 +201,84 @@
 	</div>
 	<!-- Copyright -->
 
-	<div class="container">
+	<div class="content">
+
+
 		<!--Grid row-->
+
+
 		<div class="row d-flex justify-content-center">
+
+
 			<!--Grid column-->
-			<div class="col-md-6">
+
+
+			<div class="col-md-3">
+
+
 				<!-- Video -->
+
+
 				<div class="embed-responsive embed-responsive-16by9 mb-4">
+
+
 					<iframe width="560" height="315"
 						src="https://www.youtube.com/embed/l8VurW-_na0" frameborder="0"
 						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 						allowfullscreen></iframe>
+
+
 				</div>
+
+
 			</div>
+
+
+			<div class="col-md-3">
+
+
+				<!-- Video -->
+
+
+				<div class="embed-responsive embed-responsive-16by9 mb-4">
+
+
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/G-VYwC28KXI" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+
+
+				</div>
+
+
+			</div>
+
+
+			<div class="col-md-3">
+
+
+				<!-- Video -->
+
+
+				<div class="embed-responsive embed-responsive-16by9 mb-4">
+
+
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/7wZbcCxBP3c" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+
+
+				</div>
+
+
+			</div>
+
+
 		</div>
+
+
 	</div>
 
 	<!-- Footer -->
