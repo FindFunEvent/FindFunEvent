@@ -27,7 +27,7 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<%
-				if (session.getAttribute("connecte") != null) {
+				if (session.getAttribute("pseudoCompteActuel") != null) {
 			%>
 			<ul class="navbar-nav mr-auto">
 				<a class="nav-link" href="Resultats">Résultats <span
@@ -80,7 +80,7 @@
 
 
 		<c:choose>
-			<c:when test="${sessionScope.connecte ==null}">
+			<c:when test="${sessionScope.pseudoCompteActuel ==null}">
 
 				<div class="message">
 					<p id="message">
@@ -105,7 +105,7 @@
 
 			<!-- L'attribut "connecte"=1 signifie que l'utilisateur est bien connecté : affichage de message de bienvenue (sinon, affiche Veuillez renseigner vos identifiants) -->
 			<c:choose>
-				<c:when test="${sessionScope.connecte ==1}">Bonjour 
+				<c:when test="${sessionScope.pseudoCompteActuel !=null}">Bonjour 
 			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
 			</c:when>
 			</c:choose>
@@ -119,7 +119,7 @@
 
 			<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
 			<c:choose>
-				<c:when test="${sessionScope.connecte !=null}">
+				<c:when test="${sessionScope.pseudoCompteActuel !=null}">
 					<form action="Deconnexion" method="post" id="champDeconnexion">
 						<input type="submit" value="Deconnexion" id="Envoyer"></input>
 					</form>
@@ -127,7 +127,6 @@
 
 			</c:choose>
 		</div>
-
 
 	</nav>
 
@@ -238,6 +237,14 @@
 	<!-- Copyright -->
 
 	<!-- Footer -->
+	<script>
+		var verification = "<c:out value="${compte}"/>";
+
+		if (verification == "faux") {
+			alert("Informations manqantes ou fausses")
+		}
+	</script>
+
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
 		crossorigin="anonymous"></script>
