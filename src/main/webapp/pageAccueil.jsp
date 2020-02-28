@@ -191,6 +191,88 @@
 
 	<!-- Footer Elements -->
 
+	
+
+	<div class="content">
+
+
+		<!--Grid row-->
+
+
+		<div class="row d-flex justify-content-center">
+
+
+			<!--Grid column-->
+
+
+			<div class="col-md-3">
+
+
+				<!-- Video -->
+
+
+				<div class="embed-responsive embed-responsive-16by9 mb-4">
+
+
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/l8VurW-_na0" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+
+
+				</div>
+
+
+			</div>
+
+
+			<div class="col-md-3">
+
+
+				<!-- Video -->
+
+
+				<div class="embed-responsive embed-responsive-16by9 mb-4">
+
+
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/G-VYwC28KXI" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+
+
+				</div>
+
+
+			</div>
+
+
+			<div class="col-md-3">
+
+
+				<!-- Video -->
+
+
+				<div class="embed-responsive embed-responsive-16by9 mb-4">
+
+
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/7wZbcCxBP3c" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+
+
+				</div>
+
+
+			</div>
+
+
+		</div>
+
+
+	</div>
+	
 	<!-- Copyright -->
 	<div class="footer-copyright text-center py-3">
 		© 2020 Copyright: <a
@@ -198,22 +280,6 @@
 			MDBootstrap.com</a>
 	</div>
 	<!-- Copyright -->
-
-	<div class="container">
-		<!--Grid row-->
-		<div class="row d-flex justify-content-center">
-			<!--Grid column-->
-			<div class="col-md-6">
-				<!-- Video -->
-				<div class="embed-responsive embed-responsive-16by9 mb-4">
-					<iframe width="560" height="315"
-						src="https://www.youtube.com/embed/l8VurW-_na0" frameborder="0"
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- Footer -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
