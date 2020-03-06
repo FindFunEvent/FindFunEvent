@@ -35,7 +35,7 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<%
-				if (session.getAttribute("connecte") != null) {
+				if (session.getAttribute("pseudoCompteActuel") != null) {
 			%>
 			<ul class="navbar-nav mr-auto">
 				<a class="nav-link" href="Resultats">Résultats <span
@@ -87,7 +87,7 @@
 
 
 		<c:choose>
-			<c:when test="${sessionScope.connecte ==null}">
+			<c:when test="${sessionScope.pseudoCompteActuel ==null}">
 
 				<div class="message">
 					<p id="message">
@@ -107,6 +107,11 @@
 
 			</c:when>
 		</c:choose>
+		<c:choose>
+				<c:when test="${sessionScope.pseudoCompteActuel !=null}">Bonjour 
+			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
+			</c:when>
+			</c:choose>
 		<script>
 			/* var login = <c:out value="${sessionScope.connecte}"/>
 			if (login == 1) {
@@ -117,7 +122,7 @@
 
 		<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
 		<c:choose>
-			<c:when test="${sessionScope.connecte !=null}">
+			<c:when test="${sessionScope.pseudoCompteActuel !=null}">
 				<form action="Deconnexion" method="post" id="champDeconnexion">
 					<input type="submit" value="Deconnexion" id="Envoyer"></input>
 				</form>
