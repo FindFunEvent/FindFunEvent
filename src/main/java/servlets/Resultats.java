@@ -29,6 +29,7 @@ public class Resultats extends HttpServlet {
 		response.getWriter().append("").append(request.getContextPath());
 
 		HttpSession session = request.getSession();
+		
 		this.getServletContext().getRequestDispatcher("/resultats.jsp").forward(request, response);
 
 	}
@@ -40,5 +41,7 @@ public class Resultats extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+	
+	
 
 }

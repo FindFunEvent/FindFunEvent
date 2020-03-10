@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page isELIgnored="false"%>
 <!DOCTYPE html>
@@ -7,10 +7,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <head>
-<title>FindFunEvent - Résultats</title>
+
+<title>FindFunEvent - RÃ©sultats</title>
 <link href="CSS/pageAccueil.css" rel="stylesheet" />
-
-
+ <link href="CSS/resultats.css" rel="stylesheet" />
+   
+  
 </head>
 
 <body>
@@ -30,7 +32,7 @@
 				if (session.getAttribute("pseudoCompteActuel") != null) {
 			%>
 			<ul class="navbar-nav mr-auto">
-				   	<a class="nav-link" href="Resultats">Résultats <span class="sr-only">(current)</span></a>
+				   	<a class="nav-link" href="Resultats">RÃ©sultats <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="News">News <span class="sr-only">(current)</span></a>
@@ -40,10 +42,10 @@
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> Préférences </a>
+					aria-expanded="false"> PrÃ©fÃ©rences </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="MonClub">Mon club</a> <a
-							class="dropdown-item" href="MaSelection">Ma sélection Nationale</a>
+							class="dropdown-item" href="MaSelection">Ma sÃ©lection Nationale</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="jeu">En attendant la fin du
 							match</a>
@@ -56,7 +58,7 @@
 						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a> <a
 							class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="Pagejeu">Préférences</a>
+						<a class="dropdown-item" href="Pagejeu">PrÃ©fÃ©rences</a>
 					</div></li>
 			</ul>
 			<div id="recherche">
@@ -71,9 +73,6 @@
 		<%
 			}
 		%>
-
-
-
 
 
 
@@ -101,21 +100,21 @@
 		<div class="message">
 			<br>
 
-			<!-- L'attribut "connecte"=1 signifie que l'utilisateur est bien connecté : affichage de message de bienvenue (sinon, affiche Veuillez renseigner vos identifiants) -->
+			<!-- L'attribut "connecte"=1 signifie que l'utilisateur est bien connectÃ© : affichage de message de bienvenue (sinon, affiche Veuillez renseigner vos identifiants) -->
 			<c:choose>
 				<c:when test="${sessionScope.pseudoCompteActuel !=null}">Bonjour 
-			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
+			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connectÃ©)
 			</c:when>
 			</c:choose>
 			<script>
 				/* var login = <c:out value="${sessionScope.connecte}"/>
 				if (login == 1) {
-					alert("Vous êtes connecté")
+					alert("Vous Ãªtes connectÃ©")
 				} */
 			</script>
 
 
-			<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
+			<!-- Apparition du bouton Deconnexion quand l'utilisateur est connectÃ© : lorsque l'utulisateur appuie sur le bouton DÃ©connexion, jsp redirigÃ©e vers servlet Deconnexion qui dÃ©truit la session et renvoit Ã  pageAccueil.jsp -->
 			<c:choose>
 				<c:when test="${sessionScope.pseudoCompteActuel!=null}">
 					<form action="Deconnexion" method="post" id="champDeconnexion">
@@ -125,24 +124,35 @@
 
 			</c:choose>
 		</div>
-
-
 	</nav>
-
-
-
-
+	
 	
 
-	<div id="content">
-		<p class="alert alert-danger"></p>
-	</div>
 
+ <button action="Resultats" id="bouton">RÃ©sultats Ligue des champions</button>
+
+
+<TABLE id="affichageLdc" BORDER=0 CELLPADDING=1 WIDTH=50%>
+    
+    
+    
+</TABLE>
+
+<button id="bouton2" style="width:235.75px;">RÃ©sultats Ligue 1</button>
+<div style="align-content: right;">
+<TABLE  id="affichageLigue1" BORDER=0 CELLPADDING=1 WIDTH=50%>
+    
+    
+</TABLE>
+</div>
+    
+ 
+	
 	<!-- Footer Elements -->
 
 	<!-- Copyright -->
 	<div class="footer-copyright text-center py-3">
-		© 2020 Copyright: <a
+		Â© 2020 Copyright: <a
 			href="https://mdbootstrap.com/education/bootstrap/">
 			MDBootstrap.com</a>
 	</div>
@@ -156,7 +166,10 @@
 		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
 		crossorigin="anonymous"></script>
+		
 	<script src="js/bootstrap\bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="js/resultats.js"></script>
 </body>
 
 </html>

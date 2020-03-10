@@ -45,3 +45,29 @@ padding: 20px;
 #formulaireConnexion{
 	text-align: right;
 }
+
+
+.droite{
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.milieu{
+    text-align: center;
+    height: -100px;
+}
+
+#logoNomDomicile,#logoNomExterieur{ 
+    text-align: center;
+}
+
+#faitMatchDomicile{
+    text-align: left;
+    color: gray;
+    size: 0.5em;
+}
+#faitMatchExterieur{
+    text-align: right;
+    color: gray;
+    size: 0.5em;
+}
