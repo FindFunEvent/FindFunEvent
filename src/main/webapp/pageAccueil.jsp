@@ -58,7 +58,7 @@
 						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a>
 						<a class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="PageJeu">Préférences</a>
+						<a class="dropdown-item" href="jeu">Préférences</a>
 					</div></li>
 			</ul>
 			<div id="recherche">
@@ -84,7 +84,7 @@
 
 				<div class="message">
 					<p id="message">
-						Connectez-vous / <a href=inscriptionBootstrap.jsp>Inscrivez-vous</a>
+						Connectez-vous / <a href=inscription.jsp>Inscrivez-vous</a>
 					</p>
 
 
@@ -198,7 +198,7 @@
 		<!--Grid row-->
 		<div class="row d-flex justify-content-center">
 			<!--Grid column-->
-			<div class="col-md-6">
+			<div class="col-md-3">
 				<!-- Video -->
 				<div class="embed-responsive embed-responsive-16by9 mb-4">
 					<iframe width="560" height="315"
@@ -239,9 +239,8 @@
 	<!-- Footer -->
 	<script>
 		var verification = "<c:out value="${compte}"/>";
-
 		if (verification == "faux") {
-			alert("Informations manqantes ou fausses")
+			alert("Informations manquantes ou fausses")
 		}
 	</script>
 
