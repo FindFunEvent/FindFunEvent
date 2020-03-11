@@ -68,8 +68,10 @@ public class Inscription extends HttpServlet {
 			String username = request.getParameter("identifiant");
 			String mail = request.getParameter("mail");
 			String password = request.getParameter("motdepasse");
-			String club = request.getParameter("club");
-			String selection = request.getParameter("selection");
+			ArrayList<String> club = new ArrayList<String>();
+			club.add(request.getParameter("club"));
+			ArrayList<String> selection = new ArrayList<String>();
+			selection.add(request.getParameter("selection"));
 
 			if (!username.equals("") && !mail.equals("") && !password.equals("") && !club.equals("")
 					&& !selection.equals("")) {

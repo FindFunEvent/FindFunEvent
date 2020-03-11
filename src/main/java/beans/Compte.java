@@ -1,6 +1,9 @@
 package beans;
 
-import javax.persistence.Column;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,8 +21,10 @@ public class Compte {
 	private String username;
 	private String password;
 	private String mail;
-	private String club;
-	private String selection;
+	@ElementCollection
+	private List<String> club;
+	@ElementCollection
+	private List<String> selection;
 
 	// Setters & getters
 	public int getId() {
@@ -57,7 +62,7 @@ public class Compte {
 	
 
 	// Constructeurs
-	public Compte(String username, String password, String mail, String club, String selection) {
+	public Compte(String username, String password, String mail, List<String> club, ArrayList<String> selection) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -70,19 +75,19 @@ public class Compte {
 		super();
 	}
 
-	public String getClub() {
+	public List<String> getClub() {
 		return club;
 	}
 
-	public void setClub(String club) {
+	public void setClub(List<String> club) {
 		this.club = club;
 	}
 
-	public String getSelection() {
+	public List<String> getSelection() {
 		return selection;
 	}
 
-	public void setSelection(String selection) {
+	public void setSelection(List<String> selection) {
 		this.selection = selection;
 	}
 
