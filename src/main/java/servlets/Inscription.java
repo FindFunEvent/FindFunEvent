@@ -73,8 +73,8 @@ public class Inscription extends HttpServlet {
 			ArrayList<String> selection = new ArrayList<String>();
 			selection.add(request.getParameter("selection"));
 
-			if (!username.equals("") && !mail.equals("") && !password.equals("") && !club.equals("")
-					&& !selection.equals("")) {
+			if (!username.equals("") && !mail.equals("") && !password.equals("") && !club.equals(null)
+					&& !selection.equals(null)) {
 				Configuration config = new Configuration();
 				SessionFactory sessionFactory = config.configure().buildSessionFactory();
 				Session verifExiste = sessionFactory.openSession();
@@ -92,8 +92,8 @@ public class Inscription extends HttpServlet {
 				}
 
 			}
-			if (username.equals("") || mail.equals("") || password.equals("") || club.equals("")
-					|| selection.equals("")) {
+			if (username.equals("") || mail.equals("") || password.equals("") || club.equals(null)
+					|| selection.get(0).contains(null)) {
 				session.setAttribute("verif", 1);
 				System.out.println("Test");
 			}
