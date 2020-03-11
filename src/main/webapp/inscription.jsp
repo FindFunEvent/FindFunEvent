@@ -51,9 +51,9 @@
 									class="form-control">
 							</div>
 							<div class="form-group">
-								<label for="selection" class="text-info"></label> <select
-									type="text" name="selection" id="selection"
-									placeholder="sélection nationale" class="form-control">
+								<label for="club" class="text-info"></label> <select
+									type="text" name="club" id="club"
+									placeholder="Club" class="form-control">
 									<optgroup label="Ligue 1">
 										<option value="Amiens">Amiens</option>
 										<option value="Angers">Angers</option>
@@ -120,7 +120,7 @@
 										<option value="Villarreal CF">Villarreal CF</option>
 										<option value="Valence CF">Valence CF</option>
 									</optgroup>
-									<optgroup label="BundesLiga">
+									<optgroup label="Bundesliga">
 										<option value="1899 Hoffenheim">1899 Hoffenheim</option>
 										<option value="Bayern Munich">Bayern Munich</option>
 										<option value="Bayer Leverkusen">Bayer Leverkusen</option>
@@ -394,7 +394,7 @@
 		if (verification == 1) {
 			alert("Informations manquantes !")
 		} else if (verification == 2) {
-			alert("Trop tard, Identifiant déjà utilisé!! Limace")
+			alert("Trop tard, Identifiant déjà utilisé!!")
 		}
 	</script>
 
