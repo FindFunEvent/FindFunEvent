@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,7 +22,7 @@ public class Compte {
 	private String username;
 	private String password;
 	private String mail;
-	@ElementCollection
+	@ElementCollection(fetch = FetchType.EAGER,targetClass = String.class)
 	private List<String> club;
 	@ElementCollection
 	private List<String> selection;

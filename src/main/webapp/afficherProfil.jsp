@@ -122,7 +122,18 @@
 
 
 	</nav>
+<div>
+<h1>Club Favoris :</h1>
+<c:choose>
 
+				<c:when test="${sessionScope.pseudoCompteActuel !=null}"> 
+				<c:forEach items="${sessionScope.clubCompteActuel}" var="club">
+			<c:out value="${club}" />
+			<br />
+			</c:forEach>
+			</c:when>
+			</c:choose>
+</div>
 
 
 

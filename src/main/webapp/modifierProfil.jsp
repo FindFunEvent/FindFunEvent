@@ -30,11 +30,12 @@
 				if (session.getAttribute("pseudoCompteActuel") != null) {
 			%>
 			<ul class="navbar-nav mr-auto">
-				   	<a class="nav-link" href="Resultats">Résultats <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="News">News <span class="sr-only">(current)</span></a>
-                </li>
+				<a class="nav-link" href="Resultats">Résultats <span
+					class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active"><a class="nav-link" href="News">News
+						<span class="sr-only">(current)</span>
+				</a></li>
 				<li class="nav-item"><a class="nav-link" href=PageCalendrier>Calendrier</a>
 				</li>
 				<li class="nav-item dropdown"><a
@@ -43,7 +44,8 @@
 					aria-expanded="false"> Préférences </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="MonClub">Mon club</a> <a
-							class="dropdown-item" href="MaSelection">Ma sélection Nationale</a>
+							class="dropdown-item" href="MaSelection">Ma sélection
+							Nationale</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="Pagejeu">En attendant la fin du
 							match</a>
@@ -53,8 +55,8 @@
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Profil </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a> <a
-							class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
+						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a>
+						<a class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="Pagejeu">Préférences</a>
 					</div></li>
@@ -129,10 +131,135 @@
 
 	</nav>
 
+	<div>
+		<h1>Côté club :</h1>
+		<div class="container">
+			<div class="form-group">
+				<label for="club" class="text-info"></label> <select type="text"
+					name="club" id="club" placeholder="Club" class="form-control">
+					<optgroup label="Ligue 1">
+						<option value="Amiens">Amiens</option>
+						<option value="Angers">Angers</option>
+						<option value="Bordeaux">Bordeaux</option>
+						<option value="Brest">Brest</option>
+						<option value="Dijon">Dijon</option>
+						<option value="Lille">Lille</option>
+						<option value="Lyon">Lyon</option>
+						<option value="Marseille">Marseille</option>
+						<option value="Metz">Metz</option>
+						<option value="Monaco">Monaco</option>
+						<option value="Montpellier">Montpellier</option>
+						<option value="Nantes">Nantes</option>
+						<option value="Nice">Nice</option>
+						<option value="Nîmes">Nîmes</option>
+						<option value="Paris-SG">Paris-SG</option>
+						<option value="Reims">Reims</option>
+						<option value="Rennes">Rennes</option>
+						<option value="Saint-Étienne">Saint-Étienne</option>
+						<option value="Strasbourg">Strasbourg</option>
+						<option value="Toulouse">Toulouse</option>
+					</optgroup>
+					<optgroup label="Premier league">
+						<option value="Arsenal">Arsenal</option>
+						<option value="Aston Villa">Aston Villa</option>
+						<option value="Bournemouth">Bournemouth</option>
+						<option value="Brighton">Brighton</option>
+						<option value="Burnley">Burnley</option>
+						<option value="Chelsea">Chelsea</option>
+						<option value="Crystal Palace">Crystal Palace</option>
+						<option value="Everton">Everton</option>
+						<option value="Leicester">Leicester</option>
+						<option value="Liverpool">Liverpool</option>
+						<option value="Manchester City">Manchester City</option>
+						<option value="Manchester United">Manchester United</option>
+						<option value="Newcastle">Newcastle</option>
+						<option value="Norwich">Norwich</option>
+						<option value="Sheffield">Sheffield</option>
+						<option value="Southampton">Southampton</option>
+						<option value="Tottenham">Tottenham</option>
+						<option value="Watford">Watford</option>
+						<option value="West Ham">West Ham</option>
+						<option value="Wolverhampton">Wolverhampton</option>
+					</optgroup>
+					<optgroup label="Liga">
+						<option value="Athletic Bilbao">Athletic Bilbao</option>
+						<option value="Atlético Madrid">Atlético Madrid</option>
+						<option value="Betis Séville">Betis Séville</option>
+						<option value="CD Leganés">CD Leganés</option>
+						<option value="Celta Vigo">Celta Vigo</option>
+						<option value="Deportivo Alavés">Deportivo Alavés</option>
+						<option value="Espanyol Barcelone">Espanyol Barcelone</option>
+						<option value="FC Barcelone">FC Barcelone</option>
+						<option value="FC Séville">FC Séville</option>
+						<option value="Getafe CF">Getafe CF</option>
+						<option value="Granada CF">Granada CF</option>
+						<option value="Levante UD">Levante UD</option>
+						<option value="Osasuna Pampelune">Osasuna Pampelune</option>
+						<option value="RCD Majorque">RCD Majorque</option>
+						<option value="Real Madrid">Real Madrid</option>
+						<option value="Real Sociedad">Real Sociedad</option>
+						<option value="Real Valladolid">Real Valladolid</option>
+						<option value="SD Eibar">SD Eibar</option>
+						<option value="Villarreal CF">Villarreal CF</option>
+						<option value="Valence CF">Valence CF</option>
+					</optgroup>
+					<optgroup label="Bundesliga">
+						<option value="1899 Hoffenheim">1899 Hoffenheim</option>
+						<option value="Bayern Munich">Bayern Munich</option>
+						<option value="Bayer Leverkusen">Bayer Leverkusen</option>
+						<option value="Borussia Dortmund">Borussia Dortmund</option>
+						<option value="Borussia Mönchengladbach">Borussia
+							Mönchengladbach</option>
+						<option value="Eintracht Francfort">Eintracht Francfort</option>
+						<option value="FC Augsbourg">FC Augsbourg</option>
+						<option value="FC Cologne">FC Cologne</option>
+						<option value="Fortuna Düsseldorf">Fortuna Düsseldorf</option>
+						<option value="FSV Mayence 05">FSV Mayence 05</option>
+						<option value="Hertha BSC Berlin ">Hertha BSC Berlin</option>
+						<option value="RB Leipzig">RB Leipzig</option>
+						<option value="SC Fribourg">SC Fribourg</option>
+						<option value="SC Paderborn 07">SC Paderborn 07</option>
+						<option value="Schalke 04">Schalke 04</option>
+						<option value="Union Berlin">Union Berlin</option>
+						<option value="VfL Wolfsbourg">VfL Wolfsbourg</option>
+						<option value="Werder Brême">Werder Brême</option>
+					</optgroup>
+					<optgroup label="Serie A">
+						<option value="As Rome">As Rome</option>
+						<option value="Bergame">Bergame</option>
+						<option value="Bologne">Bologne</option>
+						<option value="Brescia">Brescia</option>
+						<option value="Cagliari">Cagliari</option>
+						<option value="Fiorentina">Fiorentina</option>
+						<option value="Genoa">Genoa</option>
+						<option value="Hellas Verone">Hellas Verone</option>
+						<option value="Inter Milan">Inter Milan</option>
+						<option value="Juventus Turin">Juventus Turin</option>
+						<option value="Lazio Rome">Lazio Rome</option>
+						<option value="Lecce">Lecce</option>
+						<option value="Milan AC">Milan AC</option>
+						<option value="Naples">Naples</option>
+						<option value="Parme">Parme</option>
+						<option value="Sampdoria Gênes">Sampdoria Gênes</option>
+						<option value="Sassuolo">Sassuolo</option>
+						<option value="Spal 2013">Spal 2013</option>
+						<option value="Torino">Torino</option>
+						<option value="Udinese">Udinese</option>
+					</optgroup>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="remember-me" class="text-info"></label><br> <input
+					type="submit" name="submit" class="btn btn-info btn-md"
+					value="ajouter le club">
+			</div>
+			
+		</div>
+	</div>
 
 
 
-	
+
 
 	<div id="content">
 		<p class="alert alert-danger"></p>
@@ -148,7 +275,7 @@
 	</div>
 	<!-- Copyright -->
 
-	
+
 
 	<!-- Footer -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

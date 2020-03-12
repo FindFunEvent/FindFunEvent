@@ -72,7 +72,7 @@ public class Inscription extends HttpServlet {
 			club.add(request.getParameter("club"));
 			ArrayList<String> selection = new ArrayList<String>();
 			selection.add(request.getParameter("selection"));
-			System.out.println("%%%"+ selection.get(0)+"%%%");
+			
 			if (!username.equals("") && !mail.equals("") && !password.equals("")) {
 				Configuration config = new Configuration();
 				SessionFactory sessionFactory = config.configure().buildSessionFactory();
@@ -93,7 +93,7 @@ public class Inscription extends HttpServlet {
 			}
 			if (username.equals("") || mail.equals("") || password.equals("")) {
 				session.setAttribute("verif", 1);
-				System.out.println("Test");
+				
 			}
 		}
 		return inscriptionValide;
