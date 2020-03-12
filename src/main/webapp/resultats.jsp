@@ -126,28 +126,122 @@
 		</div>
 	</nav>
 	
-	
+	 <button  id="bouton">Résultats Ligue des champions</button>
+<%-- <%
+String format = "dd/MM/yy H:mm:ss"; 
+java.text.SimpleDateFormat formater = new java.text.SimpleDateFormat( format ); 
+java.util.Date date = new java.util.Date(); 
 
+int mois= date.getMonth();
+int jour= date.getDay();
+System.out.println(jour);
+for (int i=0;i<jour;i++){
+%> --%>
 
- <button action="Resultats" id="bouton">Résultats Ligue des champions</button>
+<div id="ldc0"></div>
+<div id="ldc1"></div>
+<div id="ldc2"></div>
+<div id="ldc3"></div>
+<div id="ldc4"></div>
+<div id="ldc5"></div>
+<div id="ldc6"></div>
+<div id="ldc7"></div>
+<div id="ldc8"></div>
+<div id="ldc9"></div>
+<div id="ldc10"></div>
+<div id="ldc11"></div>
+<div id="ldc12"></div>
+<div id="ldc13"></div>
+<div id="ldc14"></div>
+<div id="ldc15"></div>
+<div id="ldc16"></div>
+<div id="ldc17"></div>
+<div id="ldc18"></div>
+<div id="ldc19"></div>
+<div id="ldc20"></div>
+<div id="ldc21"></div>
+<div id="ldc22"></div>
+<div id="ldc23"></div>
+<div id="ldc24"></div>
+<div id="ldc25"></div>
 
-
-<TABLE id="affichageLdc" BORDER=0 CELLPADDING=1 WIDTH=50%>
-    
-    
-    
-</TABLE>
-
+<br><br>
 <button id="bouton2" style="width:235.75px;">Résultats Ligue 1</button>
-<div style="align-content: right;">
-<TABLE  id="affichageLigue1" BORDER=0 CELLPADDING=1 WIDTH=50%>
-    
-    
-</TABLE>
-</div>
-    
+<div id="ligue10"></div>
+<div id="ligue11"></div>
+<div id="ligue12"></div>
+<div id="ligue13"></div>
+<div id="ligue14"></div>
+<div id="ligue15"></div>
+<div id="ligue10"></div>
+<div id="ligue11"></div>
+<div id="ligue12"></div>
+<div id="ligue13"></div>
+<div id="ligue14"></div>
+<div id="ligue15"></div>
  
-	
+<br><br>
+<button id="bouton3" style="width:235.75px;">Résultats Première League</button>
+<div id="league0"></div>
+<div id="league1"></div>
+<div id="league2"></div>
+<div id="league3"></div>
+<div id="league4"></div>
+<div id="league5"></div>
+<div id="league6"></div>
+<div id="league7"></div>
+<div id="league8"></div>
+<div id="league9"></div>
+<div id="league10"></div>
+<div id="league11"></div>
+
+<br><br>
+<button id="bouton4" style="width:235.75px;">Résultats Série A</button>
+<div id="serie0"></div>
+<div id="serie1"></div>
+<div id="serie2"></div>
+<div id="serie3"></div>
+<div id="serie4"></div>
+<div id="serie5"></div>
+<div id="serie6"></div>
+<div id="serie7"></div>
+<div id="serie8"></div>
+<div id="serie9"></div>
+<div id="serie10"></div>
+<div id="serie11"></div>
+
+<br><br>
+<button id="bouton5" style="width:235.75px;">Résultats Bundesliga</button>
+<div id="bundesliga0"></div>
+<div id="bundesliga1"></div>
+<div id="bundesliga2"></div>
+<div id="bundesliga3"></div>
+<div id="bundesliga4"></div>
+<div id="bundesliga5"></div>
+<div id="bundesliga6"></div>
+<div id="bundesliga7"></div>
+<div id="bundesliga8"></div>
+<div id="bundesliga9"></div>
+<div id="bundesliga10"></div>
+<div id="bundesliga11"></div>
+
+<br><br>
+<button id="bouton6" style="width:235.75px;">Résultats Liga</button>
+<div id="liga0"></div>
+<div id="liga1"></div>
+<div id="liga2"></div>
+<div id="liga3"></div>
+<div id="liga4"></div>
+<div id="liga5"></div>
+<div id="liga6"></div>
+<div id="liga7"></div>
+<div id="liga8"></div>
+<div id="liga9"></div>
+<div id="liga10"></div>
+<div id="liga11"></div>
+
+
+
 	<!-- Footer Elements -->
 
 	<!-- Copyright -->
