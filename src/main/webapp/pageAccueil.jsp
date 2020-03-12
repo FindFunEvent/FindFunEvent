@@ -147,7 +147,7 @@
 					alt="image\Ccg9vdw.jpg">
 				<div class="carousel-caption d-none d-md-block">
 					<h5>Champion 2018</h5>
-					<p>Le fameux tirage de langue de Mike</p>
+					<p>Magnifique victoire des Bleus lors du Mondial 2018</p>
 				</div>
 			</div>
 			<div class="carousel-item">
@@ -155,7 +155,7 @@
 					alt="image\Lonely-island-the-island-s-three-palm-trees_1920x1080.jpg">
 				<div class="carousel-caption d-none d-md-block">
 					<h5>Champion 1998</h5>
-					<p>Posterisation coming soon</p>
+					<p>L'artiste CR7 en action !</p>
 				</div>
 			</div>
 			<div class="carousel-item">
@@ -163,17 +163,10 @@
 					alt="image\090727122545_76.jpg">
 				<div class="carousel-caption d-none d-md-block">
 					<h5>CR7</h5>
-					<p>Les basketteurs de la NBA assurent le spectacle !</p>
+					<p>Le jeune loup de Dortmund étonne l'Europe</p>
 				</div>
 			</div>
-			<div class="carousel-item">
-				<img src="image\Ccg9vdw.jpg" class="d-block w-100"
-					alt="image\depositphotos_56179963-stock-video-small-desert-island-with-palm.jpg">
-				<div class="carousel-caption d-none d-md-block">
-					<h5>Le grand Shaq</h5>
-					<p>Attention chient très méchant</p>
-				</div>
-			</div>
+			
 		</div>
 		<a class="carousel-control-prev" href="#carouselExampleCaptions"
 			role="button" data-slide="prev"> <span

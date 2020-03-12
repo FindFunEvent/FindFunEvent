@@ -261,9 +261,7 @@
 
 
 
-	<div id="content">
-		<p class="alert alert-danger"></p>
-	</div>
+	
 
 	<!-- Footer Elements -->
 
