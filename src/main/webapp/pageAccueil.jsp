@@ -47,7 +47,7 @@
 							class="dropdown-item" href="MaSelection">Ma sélection
 							Nationale</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="Pagejeu">En attendant la fin du
+						<a class="dropdown-item" href="PageJeu">En attendant la fin du
 							match</a>
 					</div></li>
 				<li class="nav-item dropdown"><a
@@ -57,8 +57,7 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a>
 						<a class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="jeu">Préférences</a>
+						
 					</div></li>
 			</ul>
 			<div id="recherche">

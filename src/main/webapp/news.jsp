@@ -30,15 +30,11 @@
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
-
-
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<%
-				if (session.getAttribute("connecte") != null) {
+				if (session.getAttribute("pseudoCompteActuel") != null) {
 			%>
 			<ul class="navbar-nav mr-auto">
-
 				<a class="nav-link" href="Resultats">Résultats <span
 					class="sr-only">(current)</span></a>
 				</li>
@@ -52,7 +48,6 @@
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Préférences </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
 						<a class="dropdown-item" href="MonClub">Mon club</a> <a
 							class="dropdown-item" href="MaSelection">Ma sélection
 							Nationale</a>
@@ -68,7 +63,7 @@
 						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a>
 						<a class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="Pagejeu">Préférences</a>
+						<a class="dropdown-item" href="Jeu">Préférences</a>
 					</div></li>
 			</ul>
 			<div id="recherche">
@@ -79,38 +74,30 @@
 				</form>
 			</div>
 		</div>
-
 		<%
 			}
 		%>
-
 		<c:choose>
-			<c:when test="${sessionScope.connecte ==null}">
-
+			<c:when test="${sessionScope.pseudoCompteActuel ==null}">
 				<div class="message">
 					<p id="message">
 						Connectez-vous / <a href=inscriptionBootstrap.jsp>Inscrivez-vous</a>
 					</p>
-
-
 					<form action="PageAccueil" method="post" id="champConnexion">
 						<label for="id"></label> <input type="text" name="id" id="id"
 							placeholder="username" /><br> <label for="mp"></label> <input
 							type="password" name="mp" placeholder="password" /><br> <label
 							for="Envoyer"></label> <input type="submit" value="Connexion"
 							id="Envoyer"></input>
-
 					</form>
 				</div>
-
 			</c:when>
 		</c:choose>
 		<div class="message">
 			<br>
-
 			<!-- L'attribut "connecte"=1 signifie que l'utilisateur est bien connecté : affichage de message de bienvenue (sinon, affiche Veuillez renseigner vos identifiants) -->
 			<c:choose>
-				<c:when test="${sessionScope.connecte ==1}">Bonjour 
+				<c:when test="${sessionScope.pseudoCompteActuel !=null}">Bonjour
 			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
 			</c:when>
 			</c:choose>
@@ -120,22 +107,16 @@
 					alert("Vous êtes connecté")
 				} */
 			</script>
-
-
 			<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
 			<c:choose>
-				<c:when test="${sessionScope.connecte !=null}">
+				<c:when test="${sessionScope.pseudoCompteActuel !=null}">
 					<form action="Deconnexion" method="post" id="champDeconnexion">
 						<input type="submit" value="Deconnexion" id="Envoyer"></input>
 					</form>
 				</c:when>
-
 			</c:choose>
 		</div>
-
-
 	</nav>
-
 
 
 	<!-- START NEWS SECTION -->

@@ -46,7 +46,7 @@
                         <a class="dropdown-item" href="#">Mon club</a>
                         <a class="dropdown-item" href="#">Ma sélection Nationale</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="Pagejeu">En attendant la fin du match</a>
+                        <a class="dropdown-item" href="PageJeu">En attendant la fin du match</a>
                     </div>
                 </li>
                 <li class="nav-item">

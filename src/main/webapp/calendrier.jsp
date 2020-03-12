@@ -54,7 +54,7 @@
 							class="dropdown-item" href="MaSelection">Ma sélection
 							Nationale</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="Pagejeu">En attendant la fin du
+						<a class="dropdown-item" href="PageJeu">En attendant la fin du
 							match</a>
 					</div></li>
 				<li class="nav-item dropdown"><a
@@ -65,7 +65,7 @@
 						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a>
 						<a class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="Pagejeu">Préférences</a>
+						
 					</div></li>
 			</ul>
 			<div id="recherche">
@@ -107,7 +107,7 @@
 
 			</c:when>
 		</c:choose>
-<<<<<<< HEAD
+
 			<script>
 				/* var login = <c:out value="${sessionScope.connecte}"/>
 				if (login == 1) {
@@ -118,24 +118,7 @@
 
 <div class="message">
 			<br>
-<c:choose>
-				<c:when test="${sessionScope.connecte ==1}">Bonjour 
-			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
-			</c:when>
-			</c:choose>
 
-			<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
-			<c:choose>
-				<c:when test="${sessionScope.connecte !=null}">
-					<form action="Deconnexion" method="post" id="champDeconnexion">
-						<input type="submit" value="Deconnexion" id="Envoyer"></input>
-					</form>
-				</c:when>
-
-			</c:choose>
-		
-</div>
-=======
 		<c:choose>
 				<c:when test="${sessionScope.pseudoCompteActuel !=null}">Bonjour 
 			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
@@ -160,7 +143,7 @@
 		</c:choose>
 
 
->>>>>>> 55ef8a4cb02a039789d2344ef8399b370d5fdf3e
+
 	</nav>
 
 

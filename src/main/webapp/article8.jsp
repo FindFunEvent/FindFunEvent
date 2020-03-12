@@ -69,7 +69,7 @@
 						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a> <a
 							class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="Pagejeu">Préférences</a>
+						
 					</div></li>
 			</ul>
 			<div id="recherche">
