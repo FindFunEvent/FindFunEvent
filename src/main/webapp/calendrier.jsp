@@ -113,6 +113,14 @@
 			</script>
 
 
+<div class="message">
+			<br>
+<c:choose>
+				<c:when test="${sessionScope.connecte ==1}">Bonjour 
+			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
+			</c:when>
+			</c:choose>
+
 			<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
 			<c:choose>
 				<c:when test="${sessionScope.connecte !=null}">
@@ -123,7 +131,7 @@
 
 			</c:choose>
 		
-
+</div>
 	</nav>
 	
 

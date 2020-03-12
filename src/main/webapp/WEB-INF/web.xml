@@ -70,6 +70,78 @@
   	<description></description>
   	<servlet-class>servlets.MaSelection</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Article1</servlet-name>
+  	<display-name>Article1</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Article1</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Article2</servlet-name>
+  	<display-name>Article2</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Article2</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Article3</servlet-name>
+  	<display-name>Article3</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Article3</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Article4</servlet-name>
+  	<display-name>Article4</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Article4</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Article5</servlet-name>
+  	<display-name>Article5</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Article5</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Article6</servlet-name>
+  	<display-name>Article6</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Article6</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Article7</servlet-name>
+  	<display-name>Article7</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Article7</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Article8</servlet-name>
+  	<display-name>Article8</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Article8</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Article9</servlet-name>
+  	<display-name>Article9</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Article9</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Article10</servlet-name>
+  	<display-name>Article10</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Article10</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Article11</servlet-name>
+  	<display-name>Article11</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Article11</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Article12</servlet-name>
+  	<display-name>Article12</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Article12</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>PageAccueil</servlet-name>
   	<url-pattern>/PageAccueil</url-pattern>
@@ -113,5 +185,53 @@
   <servlet-mapping>
   	<servlet-name>MaSelection</servlet-name>
   	<url-pattern>/MaSelection</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Article1</servlet-name>
+  	<url-pattern>/Article1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Article2</servlet-name>
+  	<url-pattern>/Article2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Article3</servlet-name>
+  	<url-pattern>/Article3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Article4</servlet-name>
+  	<url-pattern>/Article4</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Article5</servlet-name>
+  	<url-pattern>/Article5</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Article6</servlet-name>
+  	<url-pattern>/Article6</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Article7</servlet-name>
+  	<url-pattern>/Article7</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Article8</servlet-name>
+  	<url-pattern>/Article8</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Article9</servlet-name>
+  	<url-pattern>/Article9</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Article10</servlet-name>
+  	<url-pattern>/Article10</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Article11</servlet-name>
+  	<url-pattern>/Article11</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Article12</servlet-name>
+  	<url-pattern>/Article12</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -38,6 +38,24 @@
 	-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
 		"Liberation Mono", "Courier New", monospace
 }
+.message{
+    color: white;
+    text-align: right;
+    }
+    
+    
+#recherche{
+    margin : 10px 120px 20px 0;}  
+    
+
+#navbarSupportedContent{
+	flex-direction: row-reverse;
+}
+
+
+#formulaireConnexion{
+	text-align: right;
+}
 
 *, ::after, ::before {
 	box-sizing: border-box
