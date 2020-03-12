@@ -67,7 +67,7 @@
             
             
 <c:choose>		
-<c:when test="${sessionScope.connecte ==null}">
+<c:when test="${sessionScope.pseudoCompteActuel ==null}">
 
             <div>
 		<p id="message">Connectez-vous / <a href=inscriptionBootstrap.jsp>Inscrivez-vous</a></p>
@@ -91,7 +91,7 @@
 		
 		<!-- L'attribut "connecte"=1 signifie que l'utilisateur est bien connecté : affichage de message de bienvenue (sinon, affiche Veuillez renseigner vos identifiants) -->
 		<c:choose>
-			<c:when test="${sessionScope.connecte ==1}">Bonjour 
+			<c:when test="${sessionScope.pseudoCompteActuel != null}">Bonjour 
 			<c:out value="${sessionScope.pseudoCompteActuel}"/> (connecté)
 			</c:when>
 		</c:choose>
@@ -100,7 +100,7 @@
 		
 				<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
 <c:choose>
-			<c:when test="${sessionScope.connecte !=null}">
+			<c:when test="${sessionScope.pseudoCompteActuel !=null}">
 		<form action="Deconnexion" method="post" id="champDeconnexion">
 			<input type="submit" value="Deconnexion" id="Envoyer"></input>
 		</form>

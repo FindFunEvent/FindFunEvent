@@ -39,31 +39,34 @@ public class PageAccueil extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		System.out.println("coucou");
-		response.getWriter().append("").append(request.getContextPath());
+		System.out.println("coucou");
+		
 
 		HttpSession session = request.getSession();
 
 		String username = request.getParameter("id");
 		String password = request.getParameter("mp");
-//		System.out.println(username);
-//		System.out.println(password);
+		System.out.println(username);
+		System.out.println(password);
 		Compte compteChoisi = GestionCompte.recuperationCompte(username, password);
+		
 		if (compteChoisi != null){
+			System.out.println("ok");
 			session.setAttribute("pseudoCompteActuel", compteChoisi.getUsername());
 			session.setAttribute("mailCompteActuel", compteChoisi.getMail());
 			session.setAttribute("clubCompteActuel", compteChoisi.getClub());
 			session.setAttribute("selectionCompteActuel", compteChoisi.getSelection());
-			session.setAttribute("connecte",1);
-//			System.out.println("Test Good");
+			System.out.println("Test Good");
 		}
 
 		else {
-			this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
-
+			System.out.println("koe");
+			session.setAttribute("pseudoCompteActuel",null);
+			request.setAttribute("compte","faux");
+			System.out.println("ko");
 
 		}
-		
+		System.out.println(session.getAttribute("pseudoCompteActuel"));
 		
 		this.getServletContext().getRequestDispatcher("/pageAccueil.jsp").forward(request, response);
 

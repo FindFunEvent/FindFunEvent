@@ -44,7 +44,7 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<%
-				if (session.getAttribute("connecte") != null) {
+				if (session.getAttribute("pseudoCompteActuel") != null) {
 			%>
 			<ul class="navbar-nav mr-auto">
 
@@ -77,8 +77,12 @@
 						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a>
 						<a class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="Pagejeu">Préférences</a>
+						<a class="dropdown-item" href="Jeu">Préférences</a>
 					</div></li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55ef8a4cb02a039789d2344ef8399b370d5fdf3e
 			</ul>
 			<div id="recherche">
 				<form class="form-inline my-2 my-lg-0">
@@ -94,7 +98,7 @@
 		%>
 
 		<c:choose>
-			<c:when test="${sessionScope.connecte ==null}">
+			<c:when test="${sessionScope.pseudoCompteActuel ==null}">
 
 				<div class="message">
 					<p id="message">
@@ -116,10 +120,9 @@
 		</c:choose>
 		<div class="message">
 			<br>
-
 			<!-- L'attribut "connecte"=1 signifie que l'utilisateur est bien connecté : affichage de message de bienvenue (sinon, affiche Veuillez renseigner vos identifiants) -->
 			<c:choose>
-				<c:when test="${sessionScope.connecte ==1}">Bonjour 
+				<c:when test="${sessionScope.pseudoCompteActuel !=null}">Bonjour 
 			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
 			</c:when>
 			</c:choose>
@@ -133,7 +136,7 @@
 
 			<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
 			<c:choose>
-				<c:when test="${sessionScope.connecte !=null}">
+				<c:when test="${sessionScope.pseudoCompteActuel !=null}">
 					<form action="Deconnexion" method="post" id="champDeconnexion">
 						<input type="submit" value="Deconnexion" id="Envoyer"></input>
 					</form>
@@ -149,18 +152,29 @@
 
 	<!-- START NEWS SECTION -->
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55ef8a4cb02a039789d2344ef8399b370d5fdf3e
 	<section class="section-news">
 		<div class="container">
 			<div class="header-section">
 				<h3 class="small-title">
+<<<<<<< HEAD
 					<span></span>Recent News
 				</h3>
 				<h2 class="title">News & Articles</h2>
+=======
+					<span></span> Ce qu'il y a de nouveau
+				</h3>
+				<h2 class="title">News toute fraiches</h2>
+>>>>>>> 55ef8a4cb02a039789d2344ef8399b370d5fdf3e
 			</div>
 			<div class="row">
 				<!-- start single news ARTICLE 1-->
 				<div class="col-12 col-md-6">
 					<div class="single-news">
+<<<<<<< HEAD
 						<a href="Article1">
 							<div id="contenant2"></div>
 						</a>
@@ -179,6 +193,22 @@
 							<span class="author">By <span id="contenant6"></span><br>
 								<span class="comments">0 Comments</span>
 						
+=======
+						<a href="#"><img
+							src="https://a.espncdn.com/photo/2020/0227/r672282_1296x729_16-9.jpg"
+							alt=""></a>
+						<div class="content">
+							<span class="date">30 NOV 2019</span>
+							<h3 class="title">
+								<a href="#">Lorem Ipsum is simply dummy text of the printing</a>
+							</h3>
+							<p class="text">There are many variations of passages of
+								Lorem Ipsum available, but the majority have suffered alteration
+								in some form, by injected humour, or randomised words which
+								don't look even slightly believable.</p>
+							<span class="author">By Admin</span> <span class="comments">0
+								Comments</span>
+>>>>>>> 55ef8a4cb02a039789d2344ef8399b370d5fdf3e
 						</div>
 					</div>
 				</div>
@@ -187,6 +217,7 @@
 				<!-- start single news ARTICLE 2-->
 				<div class="col-12 col-md-6">
 					<div class="single-news">
+<<<<<<< HEAD
 						<a href="Article2">
 							<div id="contenant9"></div>
 						</a>
@@ -209,6 +240,22 @@
 							<span class="author">By <span id="contenant13"></span><br>
 								<span class="comments">0 Comments</span>
 						
+=======
+						<a href="#"><img
+							src="https://a.espncdn.com/media/motion/ESPNi/2020/0227/int_200227_inet_fc_declan_rice/int_200227_inet_fc_declan_rice.jpg"
+							alt=""></a>
+						<div class="content">
+							<span class="date">30 NOV 2019</span>
+							<h3 class="title">
+								<a href="#">Lorem Ipsum is simply dummy text of the printing</a>
+							</h3>
+							<p class="text">There are many variations of passages of
+								Lorem Ipsum available, but the majority have suffered alteration
+								in some form, by injected humour, or randomised words which
+								don't look even slightly believable.</p>
+							<span class="author">By Admin</span> <span class="comments">0
+								Comments</span>
+>>>>>>> 55ef8a4cb02a039789d2344ef8399b370d5fdf3e
 						</div>
 					</div>
 				</div>
@@ -519,7 +566,7 @@
 
 
 
-	
+
 
 
 	<!-- Footer Elements -->
@@ -533,7 +580,7 @@
 	</div>
 	<!-- Copyright -->
 
-	
+
 
 
 	<!-- Footer -->

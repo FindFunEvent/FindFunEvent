@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-  pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page isELIgnored="false"%>
 <!DOCTYPE html>
@@ -7,21 +7,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <head>
-    <title>FindFunEvent - Calendrier</title>
-    <link href="CSS\calendrier.css" rel="stylesheet" />
-    <style>
-    
-    #message{
-    color: white;}
-    
-    #recherche{
-    margin : 10px 120px 20px 0;}
-    
-    </style>
+<title>FindFunEvent - Calendrier</title>
+<link href="CSS\calendrier.css" rel="stylesheet" />
+<style>
+#message {
+	color: white;
+}
+
+#recherche {
+	margin: 10px 120px 20px 0;
+}
+</style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 
 		<a class="navbar-brand" href="PageAccueil">FindFunEvent</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -35,13 +35,14 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<%
-				if (session.getAttribute("connecte") != null) {
+				if (session.getAttribute("pseudoCompteActuel") != null) {
 			%>
 			<ul class="navbar-nav mr-auto">
-				   	<a class="nav-link" href="Resultats">Résultats <span class="sr-only">(current)</span></a>
-                <li class="nav-item active">
-                    <a class="nav-link" href="News">News <span class="sr-only">(current)</span></a>
-                </li>
+				<a class="nav-link" href="Resultats">Résultats <span
+					class="sr-only">(current)</span></a>
+				<li class="nav-item active"><a class="nav-link" href="News">News
+						<span class="sr-only">(current)</span>
+				</a></li>
 				<li class="nav-item"><a class="nav-link" href=PageCalendrier>Calendrier</a>
 				</li>
 				<li class="nav-item dropdown"><a
@@ -50,7 +51,8 @@
 					aria-expanded="false"> Préférences </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="MonClub">Mon club</a> <a
-							class="dropdown-item" href="MaSelection">Ma sélection Nationale</a>
+							class="dropdown-item" href="MaSelection">Ma sélection
+							Nationale</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="Pagejeu">En attendant la fin du
 							match</a>
@@ -60,8 +62,8 @@
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Profil </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a> <a
-							class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
+						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a>
+						<a class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="Pagejeu">Préférences</a>
 					</div></li>
@@ -85,7 +87,7 @@
 
 
 		<c:choose>
-			<c:when test="${sessionScope.connecte ==null}">
+			<c:when test="${sessionScope.pseudoCompteActuel ==null}">
 
 				<div class="message">
 					<p id="message">
@@ -105,6 +107,7 @@
 
 			</c:when>
 		</c:choose>
+<<<<<<< HEAD
 			<script>
 				/* var login = <c:out value="${sessionScope.connecte}"/>
 				if (login == 1) {
@@ -132,28 +135,61 @@
 			</c:choose>
 		
 </div>
+=======
+		<c:choose>
+				<c:when test="${sessionScope.pseudoCompteActuel !=null}">Bonjour 
+			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
+			</c:when>
+			</c:choose>
+		<script>
+			/* var login = <c:out value="${sessionScope.connecte}"/>
+			if (login == 1) {
+				alert("Vous êtes connecté")
+			} */
+		</script>
+
+
+		<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
+		<c:choose>
+			<c:when test="${sessionScope.pseudoCompteActuel !=null}">
+				<form action="Deconnexion" method="post" id="champDeconnexion">
+					<input type="submit" value="Deconnexion" id="Envoyer"></input>
+				</form>
+			</c:when>
+
+		</c:choose>
+
+
+>>>>>>> 55ef8a4cb02a039789d2344ef8399b370d5fdf3e
 	</nav>
-	
-
-	
-	
-	
-	
-
-  <div id="calendar"></div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
-<br><script src="js/calendar.js"></script>
 
 
 
 
 
 
-<footer class="page-footer font-small mdb-color darken-3 pt-4">
-  </footer>
-  <!-- Footer -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="js/bootstrap\bootstrap.bundle.min.js"></script>
+
+	<div id="calendar"></div>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+	<br>
+	<script src="js/calendar.js"></script>
+
+
+
+
+
+
+	<footer class="page-footer font-small mdb-color darken-3 pt-4">
+	</footer>
+	<!-- Footer -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="js/bootstrap\bootstrap.bundle.min.js"></script>
 </body>
-    </html>
+</html>

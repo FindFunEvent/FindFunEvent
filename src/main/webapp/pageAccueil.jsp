@@ -27,14 +27,15 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<%
-				if (session.getAttribute("connecte") != null) {
+				if (session.getAttribute("pseudoCompteActuel") != null) {
 			%>
 			<ul class="navbar-nav mr-auto">
-				   	<a class="nav-link" href="Resultats">Résultats <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="News">News <span class="sr-only">(current)</span></a>
-                </li>
+				<a class="nav-link" href="Resultats">Résultats <span
+					class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active"><a class="nav-link" href="News">News
+						<span class="sr-only">(current)</span>
+				</a></li>
 				<li class="nav-item"><a class="nav-link" href=PageCalendrier>Calendrier</a>
 				</li>
 				<li class="nav-item dropdown"><a
@@ -43,7 +44,8 @@
 					aria-expanded="false"> Préférences </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="MonClub">Mon club</a> <a
-							class="dropdown-item" href="MaSelection">Ma sélection Nationale</a>
+							class="dropdown-item" href="MaSelection">Ma sélection
+							Nationale</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="Pagejeu">En attendant la fin du
 							match</a>
@@ -53,10 +55,10 @@
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Profil </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a> <a
-							class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
+						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a>
+						<a class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="PageJeu">Préférences</a>
+						<a class="dropdown-item" href="jeu">Préférences</a>
 					</div></li>
 			</ul>
 			<div id="recherche">
@@ -78,11 +80,11 @@
 
 
 		<c:choose>
-			<c:when test="${sessionScope.connecte ==null}">
+			<c:when test="${sessionScope.pseudoCompteActuel ==null}">
 
 				<div class="message">
 					<p id="message">
-						Connectez-vous / <a href=inscriptionBootstrap.jsp>Inscrivez-vous</a>
+						Connectez-vous / <a href=inscription.jsp>Inscrivez-vous</a>
 					</p>
 
 
@@ -103,7 +105,7 @@
 
 			<!-- L'attribut "connecte"=1 signifie que l'utilisateur est bien connecté : affichage de message de bienvenue (sinon, affiche Veuillez renseigner vos identifiants) -->
 			<c:choose>
-				<c:when test="${sessionScope.connecte ==1}">Bonjour 
+				<c:when test="${sessionScope.pseudoCompteActuel !=null}">Bonjour 
 			<c:out value="${sessionScope.pseudoCompteActuel}" /> (connecté)
 			</c:when>
 			</c:choose>
@@ -117,7 +119,7 @@
 
 			<!-- Apparition du bouton Deconnexion quand l'utilisateur est connecté : lorsque l'utulisateur appuie sur le bouton Déconnexion, jsp redirigée vers servlet Deconnexion qui détruit la session et renvoit à pageAccueil.jsp -->
 			<c:choose>
-				<c:when test="${sessionScope.connecte !=null}">
+				<c:when test="${sessionScope.pseudoCompteActuel !=null}">
 					<form action="Deconnexion" method="post" id="champDeconnexion">
 						<input type="submit" value="Deconnexion" id="Envoyer"></input>
 					</form>
@@ -125,7 +127,6 @@
 
 			</c:choose>
 		</div>
-
 
 	</nav>
 
@@ -191,19 +192,13 @@
 
 	<!-- Footer Elements -->
 
-	<!-- Copyright -->
-	<div class="footer-copyright text-center py-3">
-		© 2020 Copyright: <a
-			href="https://mdbootstrap.com/education/bootstrap/">
-			MDBootstrap.com</a>
-	</div>
-	<!-- Copyright -->
 
-	<div class="container">
+
+	<div class="content">
 		<!--Grid row-->
 		<div class="row d-flex justify-content-center">
 			<!--Grid column-->
-			<div class="col-md-6">
+			<div class="col-md-3">
 				<!-- Video -->
 				<div class="embed-responsive embed-responsive-16by9 mb-4">
 					<iframe width="560" height="315"
@@ -212,10 +207,43 @@
 						allowfullscreen></iframe>
 				</div>
 			</div>
+			<div class="col-md-3">
+				<!-- Video -->
+				<div class="embed-responsive embed-responsive-16by9 mb-4">
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/G-VYwC28KXI" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<!-- Video -->
+				<div class="embed-responsive embed-responsive-16by9 mb-4">
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/7wZbcCxBP3c" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</div>
 		</div>
 	</div>
 
+	<!-- Copyright -->
+	<div class="footer-copyright text-center py-3">
+		© 2020 Copyright: <a
+			href="https://mdbootstrap.com/education/bootstrap/">
+			MDBootstrap.com</a>
+	</div>
+	<!-- Copyright -->
+
 	<!-- Footer -->
+	<script>
+		var verification = "<c:out value="${compte}"/>";
+		if (verification == "faux") {
+			alert("Informations manquantes ou fausses")
+		}
+	</script>
+
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
 		crossorigin="anonymous"></script>
