@@ -10,9 +10,10 @@
 
 <title>FindFunEvent - Résultats</title>
 <link href="CSS/pageAccueil.css" rel="stylesheet" />
- <link href="CSS/resultats.css" rel="stylesheet" />
-   
-  
+<link href="CSS/resultats.css" rel="stylesheet" />
+
+
+
 </head>
 
 <body>
@@ -32,11 +33,12 @@
 				if (session.getAttribute("pseudoCompteActuel") != null) {
 			%>
 			<ul class="navbar-nav mr-auto">
-				   	<a class="nav-link" href="Resultats">Résultats <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="News">News <span class="sr-only">(current)</span></a>
-                </li>
+				<a class="nav-link" href="Resultats">Résultats <span
+					class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active"><a class="nav-link" href="News">News
+						<span class="sr-only">(current)</span>
+				</a></li>
 				<li class="nav-item"><a class="nav-link" href=PageCalendrier>Calendrier</a>
 				</li>
 				<li class="nav-item dropdown"><a
@@ -45,7 +47,8 @@
 					aria-expanded="false"> Préférences </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="MonClub">Mon club</a> <a
-							class="dropdown-item" href="MaSelection">Ma sélection Nationale</a>
+							class="dropdown-item" href="MaSelection">Ma sélection
+							Nationale</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="jeu">En attendant la fin du
 							match</a>
@@ -55,8 +58,8 @@
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Profil </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a> <a
-							class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
+						<a class="dropdown-item" href="AfficherProfil">Afficher Profil</a>
+						<a class="dropdown-item" href="ModifierProfil">Modifier Profil</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="Pagejeu">Préférences</a>
 					</div></li>
@@ -125,120 +128,112 @@
 			</c:choose>
 		</div>
 	</nav>
+
+<div class='z' id="boutons" style="text-align: center;"><button id="bouton" value=0>Résultats Ligue des Champions</button><button id="bouton2" style="width: 240px;">Résultats Ligue
+		1</button><button id="bouton3" style="width: 240px;">Résultats
+		Première League</button><button id="bouton4" style="width: 240px;">Résultats Série
+		A</button><button id="bouton5" style="width: 240px;">Résultats
+		Bundesliga</button><button id="bouton6" style="width: 240px;">Résultats Liga</button></div>
 	
-	 <button  id="bouton">Résultats Ligue des champions</button>
-<%-- <%
-String format = "dd/MM/yy H:mm:ss"; 
+
+	<% String format = "dd/MM/yy H:mm:ss"; 
 java.text.SimpleDateFormat formater = new java.text.SimpleDateFormat( format ); 
 java.util.Date date = new java.util.Date(); 
 
 int mois= date.getMonth();
 int jour= date.getDay();
-System.out.println(jour);
-for (int i=0;i<jour;i++){
-%> --%>
 
-<div id="ldc0"></div>
-<div id="ldc1"></div>
-<div id="ldc2"></div>
-<div id="ldc3"></div>
-<div id="ldc4"></div>
-<div id="ldc5"></div>
-<div id="ldc6"></div>
-<div id="ldc7"></div>
-<div id="ldc8"></div>
-<div id="ldc9"></div>
-<div id="ldc10"></div>
-<div id="ldc11"></div>
-<div id="ldc12"></div>
-<div id="ldc13"></div>
-<div id="ldc14"></div>
-<div id="ldc15"></div>
-<div id="ldc16"></div>
-<div id="ldc17"></div>
-<div id="ldc18"></div>
-<div id="ldc19"></div>
-<div id="ldc20"></div>
-<div id="ldc21"></div>
-<div id="ldc22"></div>
-<div id="ldc23"></div>
-<div id="ldc24"></div>
-<div id="ldc25"></div>
+for (int i=1;i<jour;i++){
+	
+out.println("<div id=\""+i+"\"><div id=\"ldc0"+i+"\"></div>"+
+		"<div  id=\"ldc1"+i+"\"></div>"+
+		"<div  id=\"ldc2"+i+"\"></div>"+
+		"<div  id=\"ldc3"+i+"\"></div>"+
+		"<div  id=\"ldc4"+i+"\"></div>"+
+		"<div   id=\"ldc5"+i+"\"></div>"+
+		"<div  id=\"ldc6"+i+"\"></div>"+
+		"<div  id=\"ldc7"+i+"\"></div>"+
+		"<div  id=\"ldc8"+i+"\"></div></div>");
+} 
+%>
 
-<br><br>
-<button id="bouton2" style="width:235.75px;">Résultats Ligue 1</button>
-<div id="ligue10"></div>
-<div id="ligue11"></div>
-<div id="ligue12"></div>
-<div id="ligue13"></div>
-<div id="ligue14"></div>
-<div id="ligue15"></div>
-<div id="ligue10"></div>
-<div id="ligue11"></div>
-<div id="ligue12"></div>
-<div id="ligue13"></div>
-<div id="ligue14"></div>
-<div id="ligue15"></div>
- 
-<br><br>
-<button id="bouton3" style="width:235.75px;">Résultats Première League</button>
-<div id="league0"></div>
-<div id="league1"></div>
-<div id="league2"></div>
-<div id="league3"></div>
-<div id="league4"></div>
-<div id="league5"></div>
-<div id="league6"></div>
-<div id="league7"></div>
-<div id="league8"></div>
-<div id="league9"></div>
-<div id="league10"></div>
-<div id="league11"></div>
+	
+		<% 
+for (int i=1;i<jour;i++){
+	
+out.println(
+		"<div  id=\"ligue11"+i+"\"></div>"+
+		"<div  id=\"ligue12"+i+"\"></div>"+
+		"<div  id=\"ligue13"+i+"\"></div>"+
+		"<div  id=\"ligue14"+i+"\"></div>"+
+		"<div  id=\"ligue15"+i+"\"></div>"+
+		"<div  id=\"ligue16"+i+"\"></div>"+
+		"<div  id=\"ligue17"+i+"\"></div>"+
+		"<div  id=\"ligue18"+i+"\"></div>");
+} %>
 
-<br><br>
-<button id="bouton4" style="width:235.75px;">Résultats Série A</button>
-<div id="serie0"></div>
-<div id="serie1"></div>
-<div id="serie2"></div>
-<div id="serie3"></div>
-<div id="serie4"></div>
-<div id="serie5"></div>
-<div id="serie6"></div>
-<div id="serie7"></div>
-<div id="serie8"></div>
-<div id="serie9"></div>
-<div id="serie10"></div>
-<div id="serie11"></div>
 
-<br><br>
-<button id="bouton5" style="width:235.75px;">Résultats Bundesliga</button>
-<div id="bundesliga0"></div>
-<div id="bundesliga1"></div>
-<div id="bundesliga2"></div>
-<div id="bundesliga3"></div>
-<div id="bundesliga4"></div>
-<div id="bundesliga5"></div>
-<div id="bundesliga6"></div>
-<div id="bundesliga7"></div>
-<div id="bundesliga8"></div>
-<div id="bundesliga9"></div>
-<div id="bundesliga10"></div>
-<div id="bundesliga11"></div>
+		<% 
+for (int i=1;i<jour;i++){
+	
+out.println("<div id=\"league0"+i+"\"></div>"+
+		"<div  id=\"league1"+i+"\"></div>"+
+		"<div  id=\"league2"+i+"\"></div>"+
+		"<div  id=\"league3"+i+"\"></div>"+
+		"<div  id=\"league4"+i+"\"></div>"+
+		"<div  id=\"league5"+i+"\"></div>"+
+		"<div  id=\"league6"+i+"\"></div>"+
+		"<div  id=\"league7"+i+"\"></div>"+
+		"<div  id=\"league8"+i+"\"></div>");
+} %>
 
-<br><br>
-<button id="bouton6" style="width:235.75px;">Résultats Liga</button>
-<div id="liga0"></div>
-<div id="liga1"></div>
-<div id="liga2"></div>
-<div id="liga3"></div>
-<div id="liga4"></div>
-<div id="liga5"></div>
-<div id="liga6"></div>
-<div id="liga7"></div>
-<div id="liga8"></div>
-<div id="liga9"></div>
-<div id="liga10"></div>
-<div id="liga11"></div>
+	
+		<% 
+for (int i=1;i<jour;i++){
+	
+out.println("<div id=\"serie0"+i+"\"></div>"+
+		"<div  id=\"serie1"+i+"\"></div>"+
+		"<div  id=\"serie2"+i+"\"></div>"+
+		"<div  id=\"serie3"+i+"\"></div>"+
+		"<div  id=\"serie4"+i+"\"></div>"+
+		"<div  id=\"serie5"+i+"\"></div>"+
+		"<div  id=\"serie6"+i+"\"></div>"+
+		"<div  id=\"serie7"+i+"\"></div>"+
+		"<div  id=\"serie8"+i+"\"></div>");
+} %>
+
+
+		<% 
+for (int i=1;i<jour;i++){
+	
+out.println("<div id=\"bundesliga0"+i+"\"></div>"+
+		"<div  id=\"bundesliga1"+i+"\"></div>"+
+		"<div  id=\"bundesliga2"+i+"\"></div>"+
+		"<div  id=\"bundesliga3"+i+"\"></div>"+
+		"<div  id=\"bundesliga4"+i+"\"></div>"+
+		"<div  id=\"bundesliga5"+i+"\"></div>"+
+		"<div  id=\"bundesliga6"+i+"\"></div>"+
+		"<div  id=\"bundesliga7"+i+"\"></div>"+
+		"<div  id=\"bundesliga8"+i+"\"></div>");
+} %>
+
+
+		<% 
+for (int i=1;i<jour;i++){
+	
+out.println("<div id=\"liga0"+i+"\"></div>"+
+		"<div  id=\"liga1"+i+"\"></div>"+
+		"<div  id=\"liga2"+i+"\"></div>"+
+		"<div  id=\"liga3"+i+"\"></div>"+
+		"<div  id=\"liga4"+i+"\"></div>"+
+		"<div  id=\"liga5"+i+"\"></div>"+
+		"<div  id=\"liga6"+i+"\"></div>"+
+		"<div  id=\"liga7"+i+"\"></div>"+
+		"<div  id=\"liga8"+i+"\"></div>");
+} %>
+
+
+
 
 
 
@@ -260,9 +255,10 @@ for (int i=0;i<jour;i++){
 		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
 		crossorigin="anonymous"></script>
-		
+
 	<script src="js/bootstrap\bootstrap.bundle.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="js/resultats.js"></script>
 </body>
 
